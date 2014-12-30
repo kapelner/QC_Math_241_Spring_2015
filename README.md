@@ -2,10 +2,10 @@
 
 This is the course homepage for Math 241 for the Spring semester 2015 at Queens College, City University of New York taught by Professor Adam Kapelner.
 
-The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Spring_2015/master/syllabus/syllabus.pdf). Announcements and links to homework assignments and required readings will be posted below.
 
-You can check your grades in realtime at [http://kapelner.com/grades](http://kapelner.com/grades). You type in your QC ID # and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.
+## Syllabus
 
+The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Spring_2015/master/syllabus/syllabus.pdf).
 
 ## Homeworks
 <!--
@@ -47,3 +47,6 @@ I *want* you to come to office hours!
 Time: Tues 10:30--11AM and 2:55-3:55PM, Thurs 10:30-11AM
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
+## Grades and Class Standing
+
+You can check your grades in realtime at [http://kapelner.com/grades](http://kapelner.com/grades). You type in your QC ID # and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.

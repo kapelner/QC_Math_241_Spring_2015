@@ -1,6 +1,6 @@
-# MATH 241 Spring 2014-15
+# MATH 241 Spring 2015
 
-This is the course homepage for Math 241 for the Spring semester 2014-15 at Queens College, City University of New York taught by Professor Adam Kapelner.
+This is the course homepage for Math 241 for the Spring semester 2015 at Queens College, City University of New York taught by Professor Adam Kapelner.
 
 The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Spring_2015/master/syllabus/syllabus.pdf). Announcements and links to homework assignments and required readings will be posted below.
 
@@ -26,9 +26,11 @@ You can check your grades in realtime at [http://kapelner.com/grades](http://kap
 
 ## Exams
 
-* Midterm I - Thursday, March 5 (in class). <!-- Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true). -->
-* Midterm II - Thursday, April 16 (in class). <!-- Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm2/midterm2_solutions.pdf?raw=true). -->
-<!--* Final - Thursday, Dec 18 (section A: 8:30-10:30AM, section B: 11AM-1PM) location TBA.-->
+* Midterm I - Thursday, March 5 (in class). 
+<!-- Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true). -->
+* Midterm II - Thursday, April 16 (in class). 
+<!-- Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm2/midterm2_solutions.pdf?raw=true). -->
+Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM) in Kiely 258.
 
 ## Office Hours
 

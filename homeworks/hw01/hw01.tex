@@ -1,0 +1,225 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+\title{MATH 214 Fall 2014 Homework \#1}
+
+\author{Professor Adam Kapelner} % STUDENTS: DELETE my name and put your name and section here e.g. \author{John Doe, Section A}. MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
+
+\iftoggle{professormode}{
+\date{Due 11:59PM in my office, Thursday Feb 5, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read ... in Ross 7th edition.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}. There are no E.C. problems on this homework. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day.
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. \textbf{Handing it in without the printout incurs a penalty of 20 points.} Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak
+}
+
+\end{document}
+
+
+\iftoggle{professormode}{
+\paragraph{Set Theory} Problems below are related to set theory. The sets we talk about in class are composed of outcomes in a universe that are events. Some of the problems below will be about abstract sets that are divorced from the sets used in probability.\\ \\
+}
+
+\problem These are questions on abstract set theory. Assume capital letters are arbitrary sets and $\Omega$ is the universe for all the following questions. Answer as succinctly as possible. Some of this will be review.
+
+\begin{enumerate}
+\easysubproblem  
+$A \cup A$ = \quad\quad 
+$A \cap A$ = \quad\quad
+$A \cup \varnothing$ = \quad\quad 
+$A \cap \varnothing$ = \quad\quad
+$A \cup \Omega$ = \quad\quad 
+$A \cap \Omega$ = \quad\quad \\
+$A \cup A^C$ = \quad\quad
+$A \cap A^C$ = \quad\quad
+$\varnothing^C$ = \quad\quad
+$\Omega^C$ = \quad\quad
+$A \backslash A$ = \quad\quad
+$A \backslash \Omega$ = \quad\quad
+$A \backslash \varnothing$ =
+
+\easysubproblem Are the following true (T) or false (F) for arbitrary sets $A,~B,~C$? \\
+$A \subseteq \Omega$ \quad\quad $A \subset \Omega$ \quad\quad $\varnothing \subseteq A \subseteq \Omega$ \quad\quad  $A \subseteq A \cup B$ \quad\quad $A \subseteq A \cap B$
+
+\intermediatesubproblem Are the following true (T) or false (F)? The symbol \qu{$\Rightarrow$} denotes logical implication \ie if the conditions on the l.h.s are met, the statement on the r.h.s is always true. Commas should be interpreted to mean ``and.'' \\
+$A \subseteq B \Rightarrow A \cap B = A$ \quad\quad $A \subseteq B \Rightarrow A \cup B = A$ \quad\quad $A \subseteq B,~ B \subseteq C \Rightarrow A \subseteq C$ \quad\quad $A \subseteq B,~ B \subseteq C \Rightarrow A \subset C$ \quad\quad $A \subseteq B,~ A \subseteq C \Rightarrow A \subset B \cap C$ \quad\quad $A \subset A \cup B$
+
+\intermediatesubproblem Express $A \cap B$ only in terms of set subtraction (by using the symbol \qu{\textbackslash}). \spc{2}
+
+\easysubproblem Explain why $A \cup B = B \cup A$ \textit{in English}. \spc{2}
+
+\intermediatesubproblem Draw three pictures illustrating the distributive law $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ one for each of three configurations of $A,B,~C$ that you decide.  \spc{7}
+
+\end{enumerate}
+%\problem Consider the sample space $\Omega$ where you flip a fair coin and roll a fair die.
+%
+%\begin{enumerate}
+%\easysubproblem Draw this event space in a box similar to how we did in class and indicate $\abss{\Omega}$.
+%\easysubproblem Are singleton sets of the events in $\Omega$ mutually exclusive? collectively exhaustive?
+%\easysubproblem Does it matter if the coin is flipped before the die, after the die, or simultaneously with the die? Explain.
+%\easysubproblem Consider the set $T$ which represents all events where the coin was flipped tails and $E$ which represents the set of events where the die rolled an even number. Draw a Venn diagram and list the elements of the sets $T \cap E$ and $E \backslash T$ and mark them on the diagram.
+%\intermediatesubproblem Describe fully the set $2^{(E \cup T)^C}$ \ie list all its elements.
+%
+%\end{enumerate}
+
+\problem A \qu{full deck of cards} has 52 cards where each card has two characteristics: (1) one of four suits $\spadesuit,~\heartsuit,~ \clubsuit$ and $\diamondsuit$ and (2) one of 13 ranks: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K and each card is unique. The game Euchre (see \url{http://en.wikipedia.org/wiki/Euchre} for more information), 24 playing cards are used consisting of only aces, kings, queens, jacks, tens, and nines.
+
+\begin{enumerate}
+\easysubproblem Let $\Omega_E$ denote the sample space of a Euchre deck and $\Omega$ denote the sample space of a full deck. Is $\Omega_E \subset \Omega$ true?
+
+\intermediatesubproblem Construct $\Omega_E$, the event space of a Euchre deck by using set notation and operations on $\Omega$, the event space of a full deck of cards. Use the ``...'' notation used in class to specify your sets explicitly and use rank and suit such as 4$\clubsuit$ to denote the $\omega$'s $\in \Omega$. \spc{4}
+
+\hardsubproblem Let $B$ be the set of black cards, $F$ the set of face cards and $\spadesuit$ the set of spades. Describe the set on the r.h.s of:
+
+\beqn
+\braces{A\spadesuit, 9\heartsuit, K\diamondsuit} \cup \diameter ~\subseteq~ \parens{\parens{B \cup F}^C \cup \spadesuit}^C \backslash \parens{\braces{10\spadesuit, 10\clubsuit, 10\heartsuit} \cap \Omega}
+\eeqn
+\spc{4}
+
+\easysubproblem Is the statement in the previous question true?
+
+\hardsubproblem Do this problem after completing the last questions since it has to do with counting. How many ways are there to order 5 Euchre cards? \spc{4}
+
+\end{enumerate}
+
+%\problem This question will get your feet wet in JMP. Load the file \texttt{cars\_mpg\_hw1.JMP}.  The column ``name'' is the make and model of the car and the column ``HWYMPG'' is the gas mileage on the highway in miles per gallon.
+%
+%\begin{enumerate}
+%\intermediatesubproblem The ``HWYMPG'' column's data prints extra significant digits; fix this. Now, sort the dataset by gas mileage with the \textit{highest} first. Now truncate our list of cars so you only have 40 total. Now sort alphabetically by make and model. Last, create a new column that lists the highway mileage in kilometers per liter and display to three significant digits. Print this table and attach it to your homework.
+%
+%\intermediatesubproblem Using the truncated list from part (a), let $A$ be the set of all cars with less than 32 MPG or greater than or equal to 40 MPG. Find $A^C$ and intersect it with the set of all Toyotas or all Hyundais. List these cars below.
+%
+%\end{enumerate}
+
+\problem We will review the notation $\naturals$, $\integers$, $\rationals$ and $\reals$ as well as their subsets as introduced in Lecture 2.
+
+\begin{enumerate}
+\easysubproblem Draw a number line for $x$ and shade in the area that represents the set $\bracks{1,3} \cup \bracks{4,9}$. If the set includes a number on the endpoint, draw a solid circle \qu{$\bullet$} and if does not include the number, draw an open circle \qu{$\circ$.} \spc{3}
+
+\easysubproblem Draw a number line for $Z \subset \reals$ where $Z := \braces{x \in \reals : |x| \geq 2}$. This $Z$ notation we'll be using in a couple months when we get to the normal distribution. \spc{2}
+
+\easysubproblem Draw on the number line the set $\bracks{0,1} \cap \bracks{0, \half} \cap \bracks{0, \fourth}$. \spc{2}
+
+\intermediatesubproblem Find the set $A := \infunion{i}{\bracks{0, \oneover{2^i}}}$. \spc{3}
+
+\hardsubproblem Find the set $B := \infinter{i}{\bracks{0, \oneover{2^i}}}$.  \spc{3}
+
+\easysubproblem Find the set $\naturals \backslash \integers$. \spc{1}
+
+\hardsubproblem Describe the set $\reals \backslash \rationals$ as best as you can in English and give an example of an element of this set. \spc{3}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Counting} Problems below are related to counting. We will review the methods learned in class and expand our horizons. \\ \\
+}
+
+\problem In this problem, we imagine rolling different sized-dice. Assume the outcomes (each face of each die) are equally likely for that die (see middle of page 9 in H, T \& Z for a definition).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2in, height=1.35in]{dice.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\noindent Let $R$ be a standard 6-sided die, let $S$ be an 8-sided die, let $T$ be a 12-sided die, and let $U$ be a 20-sided die. What is the sample size of $\Omega$ for the experiment where we...
+
+
+
+\begin{enumerate}
+\easysubproblem roll $R$ 3 times? \spc{2}
+
+\intermediatesubproblem roll $R$ then $S$ then $T$ then $U$? \spc{2}
+
+\intermediatesubproblem roll $R$ 53 times, then roll $S$ 32 times, then roll $T$ 47 times, then roll $U$ 87 times. \spc{2}
+
+\hardsubproblem Roll $R$ and then roll $S$ only if $R$ rolled greater than or equal to 4. Would each $\omega \in \Omega$ here be equally likely? \spc{3}
+
+\end{enumerate}
+
+\problem Examine the following words and tell me how many \textit{permutations} there are of the letters. We do not care about keeping track of the individual common letters. For example, in the word $dad$, there are two $d's$ and we want to treat the permutation $d_1 d_2 a$ the \textit{same} as $d_2 d_1 a$.
+
+\begin{enumerate}
+\easysubproblem town \spc{2.3}
+
+\intermediatesubproblem mississippi \spc{2.3}
+
+\hardsubproblem supercalifragilisticexpialidocious \spc{4.0} 
+
+\end{enumerate}
+
+\problem Below is a standard chessboard.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{chess.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem How many ways are there to place the white king on a white square? \spc{2}
+
+\intermediatesubproblem How many ways are there to set up the pieces in the back ranks of both white and black \ie arrange the two rooks, two knights, two bishops, king and queen on the first row of 8 squares. Note that this game is called ``Fischer Random Chess'' after the famous grandmaster Bobby Fischer who proposed the idea to make standard chess more exciting.  \spc{4}
+
+\hardsubproblem How many ways are there to arrange the pieces on the board? We don't care about pieces of a type being unique (\ie all white pawns are the same, all black rooks are the same, etc)  \spc{6}
+
+\end{enumerate}
+
+\problem We have 4 blue marbles, 4 green marbles, 2 orange marbles, and 2 red marbles. For the following questions, if you are using ``choose notation'', please write your choose notation, then write the formula using factorials, then write the actual number after you compute it.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.1in]{marbles.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem Viewing all the marbles as \textit{unique}, how many ways are there to order the marbles? \spc{2}
+
+\intermediatesubproblem Viewing all marbles of the same color as \textit{interchangeable}, how many ways is there to order the marbles? \spc{2}
+
+\extracreditsubproblem If I pick 4 marbles at random from the collection, how many ways are there to get two-of-a-kind \ie two marbles of one color and two marbles of a different color. \spc{7}
+
+\end{enumerate}
+
+\end{document}

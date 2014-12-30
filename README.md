@@ -27,12 +27,16 @@ You can check your grades in realtime at [http://kapelner.com/grades](http://kap
 ## Exams
 
 * Midterm I - Thursday, March 5 (in class). 
+
+* Midterm II - Thursday, April 16 (in class). 
+
+Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM) in Kiely 258.
+
+
 <!-- 
 Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true). -->
-* Midterm II - Thursday, April 16 (in class). 
 <!-- 
 Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm2/midterm2_solutions.pdf?raw=true). -->
-Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM) in Kiely 258.
 <!-- 
  Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/final/final_solutions.pdf?raw=true). -->
 

@@ -30,7 +30,7 @@ You can check your grades in realtime at [http://kapelner.com/grades](http://kap
 
 * Midterm II - Thursday, April 16 (in class). 
 
-Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM) in Kiely 258.
+* Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM) in Kiely 258.
 
 
 <!-- 

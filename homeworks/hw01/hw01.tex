@@ -16,7 +16,7 @@
 \author{Professor Adam Kapelner} % STUDENTS: DELETE my name and put your name and section here e.g. \author{John Doe, Section A}. MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
 
 \iftoggle{professormode}{
-\date{Due 11:59PM in my office, Thursday Feb 5, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due 11:59PM in my office, Tuesday, Feb 10, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 
@@ -46,6 +46,46 @@ The document is available with spaces for you to write your answers. If not usin
 NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
 \pagebreak
 }
+
+\iftoggle{professormode}{
+\paragraph{Set Theory} Problems below are related to set theory. The sets we talk about in class are composed of outcomes in a universe that are events. Some of the problems below will be about abstract sets that are divorced from the sets used in probability.\\ \\
+}
+
+\problem These are questions on abstract set theory. Assume capital letters are arbitrary sets and $\Omega$ is the universe for all the following questions. Answer as succinctly as possible. Some of this will be review.
+
+\begin{enumerate}
+\easysubproblem Answer the following as best as possible. \\
+$A \cup A$ = \quad\quad \\
+$A \cap A$ = \quad\quad \\
+$A \cup \varnothing$ = \quad\quad \\
+$A \cap \varnothing$ = \quad\quad \\
+$A \cup \Omega$ = \quad\quad  \\
+$A \cap \Omega$ = \quad\quad \\
+$A \cup A^C$ = \quad\quad \\
+$A \cap A^C$ = \quad\quad \\
+$\varnothing^C$ = \quad\quad \\
+$\Omega^C$ = \quad\quad \\
+$A \backslash A$ = \quad\quad \\
+$A \backslash \Omega$ = \quad\quad \\
+$A \backslash \varnothing$ =
+
+\easysubproblem Are the following true (T) or false (F) for arbitrary sets $A,~B,~C$? \\
+$A \subseteq \Omega$ \quad\quad \\
+$A \subset \Omega$ \quad\quad \\
+$\varnothing \subseteq A $ and $A \subseteq \Omega$ \quad\quad  \\
+$A \subseteq A \cup B$ \quad\quad \\
+$A \subseteq A \cap B$
+
+\intermediatesubproblem Are the following true (T) or false (F)? The symbol \qu{$\Rightarrow$} denotes logical implication \ie if the conditions on the l.h.s are met, the statement on the r.h.s is always true. Commas should be interpreted to mean ``and.'' \\
+$A \subseteq B \Rightarrow A \cap B = A$ \quad\quad $A \subseteq B \Rightarrow A \cup B = A$ \quad\quad $A \subseteq B,~ B \subseteq C \Rightarrow A \subseteq C$ \quad\quad $A \subseteq B,~ B \subseteq C \Rightarrow A \subset C$ \quad\quad $A \subseteq B,~ A \subseteq C \Rightarrow A \subset B \cap C$ \quad\quad $A \subset A \cup B$
+
+\intermediatesubproblem Express $A \cap B$ only in terms of set subtraction (by using the symbol \qu{\textbackslash}). \spc{2}
+
+\easysubproblem Explain why $A \cup B = B \cup A$ \textit{in English}. \spc{2}
+
+\intermediatesubproblem Draw three pictures illustrating the distributive law $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ one for each of three configurations of $A,B,~C$ that you decide.  \spc{7}
+
+\end{enumerate}
 
 \end{document}
 

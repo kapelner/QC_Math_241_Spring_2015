@@ -49,7 +49,7 @@ Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_201
 
 I *want* you to come to office hours!
 
-Time: Tues 10:30--11:30AM and 2:55-3:55PM, Thurs 10:30-11:30AM
+Time: Tues 10:30--11:30AM, Thurs 10:30-11:30AM
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
 ## Grades and Class Standing

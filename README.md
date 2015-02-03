@@ -25,9 +25,9 @@ My lectures can be listened to as YouTube videos below. To ask questions, you ca
 * Homework 5 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw05/hw05.pdf?raw=true).
 * Homework 4 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw04/hw04.pdf?raw=true).
 * Homework 3 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw03/hw03.pdf?raw=true).
-* Homework 2 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw02/hw02_with_spaces.pdf?raw=true).
-* Homework 1 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw01/hw01_with_spaces.pdf?raw=true).
--->
+* Homework 2 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw02/hw02.pdf?raw=true).-->
+* Homework 1 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw01/hw01.pdf?raw=true).
+
 
 ## Exams
 

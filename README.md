@@ -54,4 +54,4 @@ Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
 ## Grades and Class Standing
 
-You can check your grades in realtime at [http://kapelner.com/grades](http://kapelner.com/grades). You type in your QC ID # and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.
+You will be able to check your grades in realtime at [http:/qcgrades.com](http:/qcgrades.com) when I finish building the server. You type in your QC ID # and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.

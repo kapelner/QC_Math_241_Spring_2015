@@ -57,12 +57,10 @@ NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
 \easysubproblem Answer the following as best as possible. \\
 $A \cup A$ = \quad\quad \\
 $A \cap A$ = \quad\quad \\
-$A \cup \varnothing$ = \quad\quad \\
 $A \cap \varnothing$ = \quad\quad \\
 $A \cup \Omega$ = \quad\quad  \\
 $A \cap \Omega$ = \quad\quad \\
 $A \cup A^C$ = \quad\quad \\
-$A \cap A^C$ = \quad\quad \\
 $\varnothing^C$ = \quad\quad \\
 $\Omega^C$ = \quad\quad \\
 $A \backslash A$ = \quad\quad \\
@@ -76,14 +74,37 @@ $\varnothing \subseteq A $ and $A \subseteq \Omega$ \quad\quad  \\
 $A \subseteq A \cup B$ \quad\quad \\
 $A \subseteq A \cap B$
 
+\intermediatesubproblem Are the following true (T) or false (F) for the arbitrary set $A$? \\
+$A \subseteq A$ \quad\quad \\
+$A \subset A$ \quad\quad \\
+$\varnothing \subseteq A $ \\
+$\varnothing \subset A $ \\
+$\varnothing \subseteq \varnothing$ \quad\quad \\
+$\varnothing \subset \varnothing$
+
 \intermediatesubproblem Are the following true (T) or false (F)? The symbol \qu{$\Rightarrow$} denotes logical implication \ie if the conditions on the l.h.s are met, the statement on the r.h.s is always true. Commas should be interpreted to mean ``and.'' \\
-$A \subseteq B \Rightarrow A \cap B = A$ \quad\quad $A \subseteq B \Rightarrow A \cup B = A$ \quad\quad $A \subseteq B,~ B \subseteq C \Rightarrow A \subseteq C$ \quad\quad $A \subseteq B,~ B \subseteq C \Rightarrow A \subset C$ \quad\quad $A \subseteq B,~ A \subseteq C \Rightarrow A \subset B \cap C$ \quad\quad $A \subset A \cup B$
+$A \subseteq B \Rightarrow A \cap B = A$ \quad\quad \\
+$A \subseteq B,~ B \subseteq C \Rightarrow A \subseteq C$ \quad\quad \\
+$A \subseteq B,~ B \subseteq C \Rightarrow A \subset C$ \quad\quad \\
+$A \subseteq B,~ A \subseteq C \Rightarrow A \subset B \cap C$ \quad\quad \\
+$A \subset A \cup B$
 
 \intermediatesubproblem Express $A \cap B$ only in terms of set subtraction (by using the symbol \qu{\textbackslash}). \spc{2}
 
 \easysubproblem Explain why $A \cup B = B \cup A$ \textit{in English}. \spc{2}
 
-\intermediatesubproblem Draw three pictures illustrating the distributive law $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ one for each of three configurations of $A,B,~C$ that you decide.  \spc{7}
+\intermediatesubproblem Draw three Venn diagrams illustrating the distributive law $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ one for each of three configurations of $A,B,~C$ that you decide. You must draw $A,B,C$ as circles. \qu{Different configurations} means that the circles overlap differently. \spc{7}
+
+\end{enumerate}
+
+\problem Consider the sample space $\Omega$ where you flip a fair coin and roll a fair die.
+
+\begin{enumerate}
+\easysubproblem Draw this event space in a box similar to how we did in class and indicate $\abss{\Omega}$.
+\easysubproblem Are singleton sets of the events in $\Omega$ mutually exclusive? collectively exhaustive?
+\easysubproblem Does it matter if the coin is flipped before the die, after the die, or simultaneously with the die? Explain.
+\easysubproblem Consider the set $T$ which represents all events where the coin was flipped tails and $E$ which represents the set of events where the die rolled an even number. Draw a Venn diagram and list the elements of the sets $T \cap E$ and $E \backslash T$ and mark them on the diagram.
+\intermediatesubproblem Describe fully the set $2^{(E \cup T)^C}$ \ie list all its elements.
 
 \end{enumerate}
 
@@ -125,21 +146,14 @@ $A \subseteq B \Rightarrow A \cap B = A$ \quad\quad $A \subseteq B \Rightarrow A
 \intermediatesubproblem Draw three pictures illustrating the distributive law $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ one for each of three configurations of $A,B,~C$ that you decide.  \spc{7}
 
 \end{enumerate}
-%\problem Consider the sample space $\Omega$ where you flip a fair coin and roll a fair die.
-%
-%\begin{enumerate}
-%\easysubproblem Draw this event space in a box similar to how we did in class and indicate $\abss{\Omega}$.
-%\easysubproblem Are singleton sets of the events in $\Omega$ mutually exclusive? collectively exhaustive?
-%\easysubproblem Does it matter if the coin is flipped before the die, after the die, or simultaneously with the die? Explain.
-%\easysubproblem Consider the set $T$ which represents all events where the coin was flipped tails and $E$ which represents the set of events where the die rolled an even number. Draw a Venn diagram and list the elements of the sets $T \cap E$ and $E \backslash T$ and mark them on the diagram.
-%\intermediatesubproblem Describe fully the set $2^{(E \cup T)^C}$ \ie list all its elements.
-%
-%\end{enumerate}
+
 
 \problem A \qu{full deck of cards} has 52 cards where each card has two characteristics: (1) one of four suits $\spadesuit,~\heartsuit,~ \clubsuit$ and $\diamondsuit$ and (2) one of 13 ranks: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K and each card is unique. The game Euchre (see \url{http://en.wikipedia.org/wiki/Euchre} for more information), 24 playing cards are used consisting of only aces, kings, queens, jacks, tens, and nines.
 
 \begin{enumerate}
-\easysubproblem Let $\Omega_E$ denote the sample space of a Euchre deck and $\Omega$ denote the sample space of a full deck. Is $\Omega_E \subset \Omega$ true?
+\easysubproblem Let $\Omega_E$ denote the sample space of a Euchre deck and $\Omega$ denote the sample space of a full deck. 
+
+\easysubproblem Is $\Omega_E \subset \Omega$ true?
 
 \intermediatesubproblem Construct $\Omega_E$, the event space of a Euchre deck by using set notation and operations on $\Omega$, the event space of a full deck of cards. Use the ``...'' notation used in class to specify your sets explicitly and use rank and suit such as 4$\clubsuit$ to denote the $\omega$'s $\in \Omega$. \spc{4}
 

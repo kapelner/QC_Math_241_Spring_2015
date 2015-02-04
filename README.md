@@ -11,7 +11,8 @@ The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_M
 
 My lectures can be listened to as YouTube videos below. To ask questions, you can comment on the videos and I will answer in another comment or in class. Make sure to include the timestamp of your comment.
 
-* [Lecture 1](http://youtu.be/No2gGyNQPPc)
+* [Lecture 2](http://youtu.be/iUYQyE__H6o) (2/3/15)
+* [Lecture 1](http://youtu.be/No2gGyNQPPc) (1/29/15)
 
 ## Homeworks
 <!--

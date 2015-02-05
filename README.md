@@ -11,6 +11,7 @@ The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_M
 
 My lectures can be listened to as YouTube videos below. To ask questions, you can comment on the videos and I will answer in another comment or in class. Make sure to include the timestamp of your comment.
 
+* [Lecture 3](http://youtu.be/TbB1aMJuwl0) (2/5/15)
 * [Lecture 2](http://youtu.be/iUYQyE__H6o) (2/3/15)
 * [Lecture 1](http://youtu.be/No2gGyNQPPc) (1/29/15)
 
@@ -50,7 +51,7 @@ Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_201
 
 I *want* you to come to office hours!
 
-Time: Tues 10:30--11:30AM, Thurs 10:30-11:30AM
+Time: Tues 10:35--11:35AM, Thurs 10:35-11:35AM
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
 
 ## Grades and Class Standing

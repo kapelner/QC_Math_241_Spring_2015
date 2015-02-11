@@ -1,11 +1,6 @@
 # MATH 241 Spring 2015
 
-This is the course homepage for Math 241 for the Spring semester 2015 at Queens College, City University of New York taught by Professor Adam Kapelner.
-
-
-## Syllabus
-
-The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Spring_2015/master/syllabus/syllabus.pdf).
+This is the course homepage for Math 241 for the Spring semester 2015 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_241_Spring_2015/master/syllabus/syllabus.pdf).
 
 ## Lectures
 
@@ -17,19 +12,9 @@ My lectures can be listened to as YouTube videos below and my lecture notes are 
 * Lecture 1, 1/29/15, [(audio)](http://youtu.be/No2gGyNQPPc) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_04_Feb_10_2015.pdf?raw=true)
 
 ## Homeworks
-<!--
-* Homework 12 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw12/hw12.pdf?raw=true).
-* Homework 11 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw11/hw11.pdf?raw=true).
-* Homework 10 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw10/hw10.pdf?raw=true).
-* Homework 9 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw09/hw09.pdf?raw=true).
-* Homework 8 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw08/hw08.pdf?raw=true).
-* Homework 7 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw07/hw07.pdf?raw=true).
-* Homework 6 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw06/hw06.pdf?raw=true).
-* Homework 5 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw05/hw05.pdf?raw=true).
-* Homework 4 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw04/hw04.pdf?raw=true).
-* Homework 3 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw03/hw03.pdf?raw=true).
-* Homework 2 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw02/hw02.pdf?raw=true).-->
-* Homework 1 can be found with spacing for you to fill in [here](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw01/hw01.pdf?raw=true).
+
+* [Homework 2](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw02/hw02.pdf?raw=true) (due 2/17/15)
+* [Homework 1](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw01/hw01.pdf?raw=true) (due 2/10/15)
 
 
 ## Exams

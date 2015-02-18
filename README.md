@@ -13,6 +13,7 @@ My lectures can be listened to as YouTube videos below and my lecture notes are 
 
 ## Homeworks
 
+* [Homework 3](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw03/hw03.pdf?raw=true) (due 2/24/15)
 * [Homework 2](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw02/hw02.pdf?raw=true) (due 2/17/15)
 * [Homework 1](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw01/hw01.pdf?raw=true) (due 2/10/15)
 

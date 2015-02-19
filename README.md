@@ -6,10 +6,12 @@ This is the course homepage for Math 241 for the Spring semester 2015 at Queens 
 
 My lectures can be listened to as YouTube videos below and my lecture notes are also scanned in as PDF files. To ask questions, you can comment on the videos and I will answer in another comment or in class. Make sure to include the timestamp of your comment.
 
-* Lecture 4, 2/10/15, [(audio)](http://youtu.be/jLHoEFW0EaU) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_01_Jan_29_2015.pdf?raw=true)
-* Lecture 3, 2/05/15, [(audio)](http://youtu.be/TbB1aMJuwl0) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_02_Feb_03_2015.pdf?raw=true)
-* Lecture 2, 2/03/15, [(audio)](http://youtu.be/iUYQyE__H6o) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_03_Feb_05_2015.pdf?raw=true)
-* Lecture 1, 1/29/15, [(audio)](http://youtu.be/No2gGyNQPPc) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_04_Feb_10_2015.pdf?raw=true)
+* Lecture 6, 2/19/15, [(audio)](http://youtu.be/-n3vNvyvuVA) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_06_Feb_19_2015.pdf?raw=true)
+* Lecture 5, 2/17/15, [(audio)](http://youtu.be/-n3vNvyvuVA) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_05_Feb_17_2015.pdf?raw=true)
+* Lecture 4, 2/10/15, [(audio)](http://youtu.be/jLHoEFW0EaU) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_04_Feb_10_2015.pdf?raw=true)
+* Lecture 3, 2/05/15, [(audio)](http://youtu.be/TbB1aMJuwl0) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_03_Feb_05_2015.pdf?raw=true)
+* Lecture 2, 2/03/15, [(audio)](http://youtu.be/iUYQyE__H6o) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_02_Feb_03_2015.pdf?raw=true)
+* Lecture 1, 1/29/15, [(audio)](http://youtu.be/No2gGyNQPPc) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_01_Jan_29_2015.pdf?raw=true)
 
 ## Homeworks
 

@@ -6,6 +6,7 @@ This is the course homepage for Math 241 for the Spring semester 2015 at Queens 
 
 My lectures can be listened to as YouTube videos below and my lecture notes are also scanned in as PDF files. To ask questions, you can comment on the videos and I will answer in another comment or in class. Make sure to include the timestamp of your comment.
 
+* Lecture 7, 2/24/15, [(audio)](http://youtu.be/DGnbDUOb5SA)
 * Lecture 6, 2/19/15, [(audio)](http://youtu.be/WIIh_oh29H8) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_06_Feb_19_2015.pdf?raw=true)
 * Lecture 5, 2/17/15, [(audio)](http://youtu.be/-n3vNvyvuVA) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_05_Feb_17_2015.pdf?raw=true)
 * Lecture 4, 2/10/15, [(audio)](http://youtu.be/jLHoEFW0EaU) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_04_Feb_10_2015.pdf?raw=true)
@@ -15,6 +16,7 @@ My lectures can be listened to as YouTube videos below and my lecture notes are 
 
 ## Homeworks
 
+* [Homework 4](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw04/hw04.pdf?raw=true) (due 3/03/15)
 * [Homework 3](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw03/hw03.pdf?raw=true) (due 2/24/15)
 * [Homework 2](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw02/hw02.pdf?raw=true) (due 2/17/15)
 * [Homework 1](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/homeworks/hw01/hw01.pdf?raw=true) (due 2/10/15)

@@ -1,0 +1,223 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+
+\title{MATH 241 Spring 2015 Homework \#4}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due 5PM outside my office, Tuesday, Mar 3, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read the section on independence in and conditional probability in Chapter 3. Chapter references are from the 7th edition of Ross.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}, \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day.
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com} (make sure you upload both the hwxx.tex and the preamble.tex file). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. \textbf{Handing it in without this printout is NO LONGER ACCEPTABLE.} Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak
+}
+
+\iftoggle{professormode}{
+\paragraph{Conditional Probability} We will solve more problems using conditional probability.\\ \\
+}
+
+
+\problem New York is a \qu{concrete jungle where dreams are made of.} To this extent, a young upstart tries to drum up business in three of the tallest buildings in the city. Below from left to right are pictured One World Trade Center (104 floors), the Empire State Building (103 floors) and the Bank of America Tower (55 floors).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{buildings.png}
+\end{figure}
+\FloatBarrier
+}
+
+\noindent Consider the case where this person enters one of the three buildings randomly and goes to a random floor.
+
+ 
+
+\begin{enumerate}
+\easysubproblem Draw a probability tree of this random event. Use ``...'' notation so your trees don't take up the whole page. \spc{9}
+
+\easysubproblem Are the building selection and floor selection \textit{independent} (\ie \textit{informationally irrelevant})? Justify your answer using the definition of statistical independence. \spc{0.5}
+
+\easysubproblem What is the probability of the businessman winding up on floor 23 of One World Trade Center on a given day?  \spc{4}
+
+\intermediatesubproblem What is the probability of the businessman winding up on floor 23 of any building on a given day?  \spc{3}
+
+\hardsubproblem If the businessman is on floor 50, what is the probability he is in the Bank of America Tower?  \spc{3}
+
+\hardsubproblem What are the \textit{odds} he winds up on any floor between 1 through 55? Interpret \qu{odds} to mean what it usually means: \textit{odds against}.  \spc{4}
+
+\extracreditsubproblem In one week, the businessman was on floor 12, 15 18, 32 and 59. What is the probability he visited One World Trade Center for more than one of those days?  \spc{6}
+
+\end{enumerate}
+
+
+\problem  Assume that the overall probability of contracting breast cancer in a 45 year old American woman is 0.1\% on average (or one in a thousand). A typical diagnostic test is a mammographic scane. Assume also that a mammograph scan reading is 80\% \textit{sensitive} on average and 95\% \textit{specific} on average. Here, \qu{sensitive} means among patients with cancer, the probability that the test is positive and \qu{specific} means among patients without cancer, the probability that the test is negative.
+
+
+\begin{enumerate}
+\easysubproblem  Denote cancer as $C$ and no cancer as $C^C$ and mammography positive as $T$ and mammography negative as $T^C$. What is $\prob{C}$, $\cprob{T}{C}$ and $\cprob{T^C}{C^C}$? These are readable from the problem statement above. You must use this notation going forward to get full credit. \spc{1}
+
+\easysubproblem Now solve for $\prob{C^C}$, $\cprob{T^C}{C}$ and $\cprob{T}{C^C}$ using the complement rule. \spc{8}
+
+\easysubproblem Draw a tree with two branches: $C$ vs. $C^C$ and then draw a second set of branches for $T$ vs. $T^C$ (four branches). Mark all four conditional probabilities in this tree's configuration and all four marginal probabilities on the right. Check your answers by assuring that these four marginal probabilities form a partition of $\prob{\Omega} = 1$. \spc{9}
+
+\easysubproblem Draw the \qu{inverted} tree. It has two branches: $T$ vs. $T^C$ and then a second set of branches for $C$ vs. $C^C$ (four branches). Mark all four conditional probabilities in this tree's configuration and all four marginal probabilities on the right. Check your answers by assuring that these four marginal probabilities form a partition of $\prob{\Omega} = 1$. \spc{9}
+
+
+\intermediatesubproblem What is $\prob{T}$? Use the law of total probability here and explain what the law is and how exactly you're using it to solve this problem. \spc{4}
+
+
+
+\hardsubproblem What does $\prob{T}$ mean? Answer \textit{in English}. \spc{3}
+
+\intermediatesubproblem Now the money question: if a woman is scanned and tests positive, what is the probability she has cancer? Use the notation I have provided and answer as a \textit{percentage} so it is more viscerally interpretable to you. Do not be alarmed if the answer surprises you.\spc{3}
+
+\intermediatesubproblem You may have done the previous question over and over and gotten frustrated. Your answer is probably correct though. Can you explain why it's so low? Comment on the usefulness of mammography given the post test probability of cancer which you computed. \spc{4}
+
+
+\intermediatesubproblem If a woman is scanned and tests positive, what is the probability she does \textit{not} have cancer? \spc{3}
+
+\intermediatesubproblem If a woman is scanned and tests negative, what is the probability she does \textit{not} have cancer? \spc{3}
+
+\intermediatesubproblem What is the ratio of $\frac{\cprob{C}{T}}{\cprob{C}{T^C}}$? What does this ratio mean? What does your answer suggest? Is it possible these scans aren't such a terrible diagnostic tool after all?  \spc{5}
+
+\end{enumerate}
+
+
+\problem We will follow up here with questions on the Monte Hall game.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.9in]{montehall.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\intermediatesubproblem In class, we used Bayes Theorem (the law of total probability with many applications of Bayes Rule) to show that if you pick door 1 and door 2 opens, then the probability that the car is in door 3 is $2/3$. Repeat that calculation here instead with the following situation: you initially selected door 1, door 3 opens, find the probability the car is in door 2. Hint: it is the same thing as the class notes, but with notation switched around. \spc{8}
+
+\intermediatesubproblem Now imagine a variant of the game is played in the following way: there are four doors, you pick one and the game show host opens up two doors to reveal two goats. You now have the option to keep the door you selected initially or switch to the other door that remains closed. What is the probability of winning if you switch? You can use Bayes Theorem as in (a) or draw a tree like we did in class. \spc{8}
+
+\extracreditsubproblem Imagine the variant where there are now $n$ doors. You choose 1 and the game show host opens up $n-2$ doors to reveal $n-2$ goats. You have the option to keep the door you selected initially or switch to the other closed door. What is the probability of winning if you switch?\spc{8}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Trees} We will solve problems using trees and introduce the Bernoulli random variable.\\ \\
+}
+
+\problem  You play a game with your friend. You both roll a die. Whoever rolls higher wins. If you roll the same number, you tie.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1in]{twodice.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+
+\begin{enumerate}
+\easysubproblem What is the probability you tie?  \spc{6}
+
+\easysubproblem What is the probability you win? Draw a tree to figure this out. The first branch is the numerical value of your roll, the second branch is the numerical value of your friend's roll. Then you mark on the right whether you Win (W), Tie (T) or Lose (L).  \spc{12}
+
+\intermediatesubproblem Imagine upon ties, the game continues: you both roll again. You play until someone has a higher roll than the other. What is the probability you win this game? Use the algebraic trick we talked about in class.  \spc{6}
+
+\extracreditsubproblem Consider the same game as described above with one rule change: your friend automatically wins if you both tie on rolling a 1 and a 1. What are fair odds (against) on this variant of the game?  \spc{8}
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Random Varibles} We now begin question about the second unit of this class: r.v.'s. \\ \\
+}
+
+
+\problem In class we spoke about how random variables map outcomes from the sample space to a number \ie $X: \Omega \rightarrow \reals$. That is they are set functions, just like the probability function which is $\mathbb{P}: \Omega \rightarrow \zeroonecl$. We will be investigating this concept here.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{rv.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem Here is a way to produce $X \sim \bernoulli{\half}$ using the $\Omega$ from a roll of a die. Map outcomes 1,2,3 to 0 and outcomes 4,5,6 to 1. This works because 
+
+\beqn
+&&\prob{X=0} = \prob{\braces{\omega : X(\omega) = 0}} = \prob{\braces{1} \cup \braces{2} \cup \braces{3}} = 1/2 ~~\text{and} \\ 
+&&\prob{X=1} = \prob{\braces{\omega : X(\omega) = 1}} = \prob{\braces{4} \cup \braces{5} \cup \braces{6}} = 1/2.
+\eeqn
+
+Describe three other scenarios or devices that produce their own $\Omega$'s that also result in $X \sim \bernoulli{\half}.$ \spc{6}
+
+\intermediatesubproblem We talked about in class how the sample space no longer needs to be considered once the random variable is described. Why? Use your answer to (a) to inspire this answer. Write it \textit{in English} below. \spc{3}
+
+\hardsubproblem Back to philosophy... Let's say $X$ models the price difference that IBM stock moves in one day of trading. For instance, if the stock closed yesterday at \$56.24 and today it closed at \$57.24, the random variable would be \$1 for today. According to our definition of a random variable, there is a sample space with outcomes being drawn ($\omega \in \Omega$) that is \qu{controlling} the value of $X$. Describe it the best you can \textit{in English}. There are no right or wrong answers here, but your answer must be coherent and demonstrate you understand the question. \spc{6}
+
+\end{enumerate}
+
+
+\problem We will now study probability mass functions (PMF's) denoted as $f(x)$ and cumulative distribution functions (CDF's) denoted as $F(X)$ and review the r.v.'s we did in class.
+
+\begin{enumerate}
+\easysubproblem Draw / graph the PMF for $X \sim \bernoulli{0.2}$. What is $\prob{X=1}$? \spc{4}
+
+\easysubproblem Take a r.v. $X$ with $\support{X} = \zeroonecl$. Is this a \qu{discrete r.v.?} Yes / no and explain. \spc{1.5}
+
+\hardsubproblem In class we defined the Bernoulli r.v. as:
+
+\beqn
+X \sim \begin{cases}
+1 \withprob p \\
+0 \withprob 1-p
+\end{cases}
+\eeqn
+
+but we did not put its PMF on the board. Write $p(x)$ for $X \sim \bernoulli{p}$ that is only valid for values in the $\support{X}$. \spc{3}
+
+\hardsubproblem What is the parameter space of $X$ where $X \sim \bernoulli{p}$ and why?  \spc{3}
+
+\end{enumerate}
+
+
+\end{document}

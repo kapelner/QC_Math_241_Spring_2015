@@ -24,7 +24,7 @@ My lectures can be listened to as YouTube videos below and my lecture notes are 
 
 ## Exams
 
-* Midterm I - Thursday, March 5 (in class).  [(practice exam)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1.pdf?raw=true) [(practice exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1_solutions.pdf)
+* Midterm I - Thursday, March 5 (in class).  [(practice exam)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1.pdf?raw=true) [(practice exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true)
 
 * Midterm II - Thursday, April 16 (in class). 
 

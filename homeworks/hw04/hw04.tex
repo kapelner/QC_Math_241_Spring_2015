@@ -165,59 +165,6 @@ NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
 
 \end{enumerate}
 
-\iftoggle{professormode}{
-\paragraph{Random Varibles} We now begin question about the second unit of this class: r.v.'s. \\ \\
-}
-
-
-\problem In class we spoke about how random variables map outcomes from the sample space to a number \ie $X: \Omega \rightarrow \reals$. That is they are set functions, just like the probability function which is $\mathbb{P}: \Omega \rightarrow \zeroonecl$. We will be investigating this concept here.
-
-\iftoggle{professormode}{
-\begin{figure}[htp]
-\centering
-\includegraphics[width=2.5in]{rv.jpg}
-\end{figure}
-\FloatBarrier
-}
-
-\begin{enumerate}
-\easysubproblem Here is a way to produce $X \sim \bernoulli{\half}$ using the $\Omega$ from a roll of a die. Map outcomes 1,2,3 to 0 and outcomes 4,5,6 to 1. This works because 
-
-\beqn
-&&\prob{X=0} = \prob{\braces{\omega : X(\omega) = 0}} = \prob{\braces{1} \cup \braces{2} \cup \braces{3}} = 1/2 ~~\text{and} \\ 
-&&\prob{X=1} = \prob{\braces{\omega : X(\omega) = 1}} = \prob{\braces{4} \cup \braces{5} \cup \braces{6}} = 1/2.
-\eeqn
-
-Describe three other scenarios or devices that produce their own $\Omega$'s that also result in $X \sim \bernoulli{\half}.$ \spc{6}
-
-\intermediatesubproblem We talked about in class how the sample space no longer needs to be considered once the random variable is described. Why? Use your answer to (a) to inspire this answer. Write it \textit{in English} below. \spc{3}
-
-\hardsubproblem Back to philosophy... Let's say $X$ models the price difference that IBM stock moves in one day of trading. For instance, if the stock closed yesterday at \$56.24 and today it closed at \$57.24, the random variable would be \$1 for today. According to our definition of a random variable, there is a sample space with outcomes being drawn ($\omega \in \Omega$) that is \qu{controlling} the value of $X$. Describe it the best you can \textit{in English}. There are no right or wrong answers here, but your answer must be coherent and demonstrate you understand the question. \spc{6}
-
-\end{enumerate}
-
-
-\problem We will now study probability mass functions (PMF's) denoted as $f(x)$ and cumulative distribution functions (CDF's) denoted as $F(X)$ and review the r.v.'s we did in class.
-
-\begin{enumerate}
-\easysubproblem Draw / graph the PMF for $X \sim \bernoulli{0.2}$. What is $\prob{X=1}$? \spc{4}
-
-\easysubproblem Take a r.v. $X$ with $\support{X} = \zeroonecl$. Is this a \qu{discrete r.v.?} Yes / no and explain. \spc{1.5}
-
-\hardsubproblem In class we defined the Bernoulli r.v. as:
-
-\beqn
-X \sim \begin{cases}
-1 \withprob p \\
-0 \withprob 1-p
-\end{cases}
-\eeqn
-
-but we did not put its PMF on the board. Write $p(x)$ for $X \sim \bernoulli{p}$ that is only valid for values in the $\support{X}$. \spc{3}
-
-\hardsubproblem What is the parameter space of $X$ where $X \sim \bernoulli{p}$ and why?  \spc{3}
-
-\end{enumerate}
 
 
 \end{document}

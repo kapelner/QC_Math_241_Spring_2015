@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+
+\title{MATH 241 Spring 2015 Homework \#5}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due 5PM, Tuesday, Mar 17, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read the section about random variables in the book. Chapter references are from the 7th edition of Ross.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}, \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day.
+
+15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com} (make sure you upload both the hwxx.tex and the preamble.tex file). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. \textbf{Handing it in without this printout is NO LONGER ACCEPTABLE.} Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak
+}
+
+
+\iftoggle{professormode}{
+\paragraph{Random Variables} We now begin question about the second unit of this class: r.v.'s. \\ \\
+}
+
+
+\problem In class we spoke about how random variables map outcomes from the sample space to a number \ie $X: \Omega \rightarrow \reals$. That is they are set functions, just like the probability function which is $\mathbb{P}: \Omega \rightarrow \zeroonecl$. We will be investigating this concept here.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{rv.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem Here is a way to produce $X \sim \bernoulli{\half}$ using the $\Omega$ from a roll of a die. Map outcomes 1,2,3 to 0 and outcomes 4,5,6 to 1. This works because 
+
+\beqn
+&&\prob{X=0} = \prob{\braces{\omega : X(\omega) = 0}} = \prob{\braces{1} \cup \braces{2} \cup \braces{3}} = 1/2 ~~\text{and} \\ 
+&&\prob{X=1} = \prob{\braces{\omega : X(\omega) = 1}} = \prob{\braces{4} \cup \braces{5} \cup \braces{6}} = 1/2.
+\eeqn
+
+Describe three other scenarios or devices that produce their own $\Omega$'s that also result in $X \sim \bernoulli{\half}.$ \spc{6}
+
+\intermediatesubproblem We talked about in class how the sample space no longer needs to be considered once the random variable is described. Why? Use your answer to (a) to inspire this answer. Write it \textit{in English} below. \spc{3}
+
+\hardsubproblem Back to philosophy... Let's say $X$ models the price difference that IBM stock moves in one day of trading. For instance, if the stock closed yesterday at \$56.24 and today it closed at \$57.24, the random variable would be \$1 for today. According to our definition of a random variable, there is a sample space with outcomes being drawn ($\omega \in \Omega$) that is \qu{controlling} the value of $X$. Describe it the best you can \textit{in English}. There are no right or wrong answers here, but your answer must be coherent and demonstrate you understand the question. \spc{6}
+
+\end{enumerate}
+
+
+\problem We will now study probability mass functions (PMF's) denoted as $f(x)$ and cumulative distribution functions (CDF's) denoted as $F(X)$ and review the r.v.'s we did in class.
+
+\begin{enumerate}
+\easysubproblem Draw / graph the PMF for $X \sim \bernoulli{0.2}$. What is $\prob{X=1}$? \spc{4}
+
+\easysubproblem Take a r.v. $X$ with $\support{X} = \zeroonecl$. Is this a \qu{discrete r.v.?} Yes / no and explain. \spc{1.5}
+
+\hardsubproblem In class we defined the Bernoulli r.v. as:
+
+\beqn
+X \sim \begin{cases}
+1 \withprob p \\
+0 \withprob 1-p
+\end{cases}
+\eeqn
+
+but we did not put its PMF on the board. Write $p(x)$ for $X \sim \bernoulli{p}$ that is only valid for values in the $\support{X}$. \spc{3}
+
+\hardsubproblem What is the parameter space of $X$ where $X \sim \bernoulli{p}$ and why?  \spc{3}
+
+\end{enumerate}
+
+
+\end{document}

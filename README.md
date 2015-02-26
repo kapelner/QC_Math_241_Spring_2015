@@ -6,8 +6,8 @@ This is the course homepage for Math 241 for the Spring semester 2015 at Queens 
 
 My lectures can be listened to as YouTube videos below and my lecture notes are also scanned in as PDF files. To ask questions, you can comment on the videos and I will answer in another comment or in class. Make sure to include the timestamp of your comment.
 
-* Lecture 8, 2/26/15, [(audio)](http://youtu.be/8iIByzWeYNw) 
-* Lecture 7, 2/24/15, [(audio)](http://youtu.be/DGnbDUOb5SA) 
+* Lecture 8, 2/26/15, [(audio)](http://youtu.be/8iIByzWeYNw) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_08_Feb_26_2015.pdf?raw=true)
+* Lecture 7, 2/24/15, [(audio)](http://youtu.be/DGnbDUOb5SA) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_07_Feb_24_2015.pdf?raw=true)
 * Lecture 6, 2/19/15, [(audio)](http://youtu.be/WIIh_oh29H8) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_06_Feb_19_2015.pdf?raw=true)
 * Lecture 5, 2/17/15, [(audio)](http://youtu.be/-n3vNvyvuVA) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_05_Feb_17_2015.pdf?raw=true)
 * Lecture 4, 2/10/15, [(audio)](http://youtu.be/jLHoEFW0EaU) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_04_Feb_10_2015.pdf?raw=true)
@@ -41,10 +41,15 @@ Solutions can be found [here](https://github.com/kapelner/QC_Math_241_Spring_201
 
 ## Office Hours
 
-I *want* you to come to office hours!
+I *want* you to come to office hours! My office hours are:
 
 Time: Tues 10:35--11:35AM, Thurs 10:35-11:35AM
 Location: Kissena Hall I Room 325 (64-19 Kissena Blvd betw 64Ave and 65Ave)
+
+And Meylin (the TA) has office hours
+
+Time: Mon 12-1PM
+Location: Delaney 112
 
 ## Grades and Class Standing
 

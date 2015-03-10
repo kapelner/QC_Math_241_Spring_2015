@@ -1,0 +1,360 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Math 241 Spring 2015 \\ Midterm Examination One}
+\author{Professor Adam Kapelner}
+
+\date{March 5, 2015}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){270} ~~~ Section (A or B)~ \line(1,0){30}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using a cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is seventy five minutes and closed-book. You are allowed one page (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If I say \qu{compute,} this means the solution will be a number. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil.\\
+
+\noindent The exam is 100 points total. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem \qu{Risk} is the game of world domination. Below is a typical board.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=4in]{risk.png}
+\end{figure}
+
+In this question, we will consider a variant of the game where there are 6 continents:
+
+\vspace{-0.25cm}
+\begin{itemize}
+\setlength{\itemsep}{-6pt}
+\item North America
+\item South America
+\item Africa
+\item Europe
+\item North Asia
+\item South Asia / Oceania
+\end{itemize}
+\vspace{-0.25cm}
+
+Each continent is split into 5 countries. Thus, there is a total of $6 \times 5 = 30$ countries.
+
+\benum
+\subquestionwithpoints{3} The game comes with 30 illustrated cards where each card represents one of the 30 countries. How many ways is there of shuffling the cards if order matters? Answer using factorial notation, permutation or choose notation.\spc{2}
+
+\subquestionwithpoints{5} Estimate the value of your answer in (a). You may answer only in terms of a decimal (round to the nearest two decimals) and the exponentiation function. \spc{10}
+
+\subquestionwithpoints{6} You play the game with four other players (thus there is a total of five players). In the beginning of the game, cards are dealt out to each player so each player is dealt 6 random cards after a thorough shuffle (5 players $\times$ 6 cards = 30). What is the probability of being dealt China, Canada, Russia, Argentina, South Africa and Western United States \textit{in that order}? Answer using factorial notation, permutation or choose notation.\spc{3}
+
+
+\subquestionwithpoints{4} Now assume order \textit{does not matter} within a 6 card hand. What is the total number of unique 6 card hands that you can be dealt? Answer using factorial notation, permutation or choose notation.\spc{3}
+
+\subquestionwithpoints{4} In a six card hand, what is the probability of being dealt all five countries in North America? Answer using factorial notation, permutation or choose notation.\spc{3}
+
+\subquestionwithpoints{5} In a six card hand, what is the probability of being dealt three pairs (of two countries) where each pair comes from a different  continent (e.g. one possible hand is two African countries, two North Asian countries and two South American countries)? Remember, order still does not matter in your dealt hand. Answer using factorial notation, permutation or choose notation.\spc{3}
+
+\subquestionwithpoints{4} After cards are dealt, each player must now distribute army units among their five countries. Each player has 45 army unit pieces to distribute. All army unit pieces are equal in value and indistinguishable. Assume it is silly to leave a country completely empty (then an opponent can appropriate that territory without any battle). How many ways can you distribute your army units among the five countries that were dealt to you at the beginning of the game? Countries are distinct because 10 armies on France and 8 armies on Mexico is a different strategic arrangement than 8 armies on France and 10 armies on Mexico. \spc{3}
+
+\subquestionwithpoints{4} On second thought, it may sometimes be strategic to leave territories empty in order to have other countries be stronger (if those countries are heavy crossroads). How many ways can you distribute the armies if you are allowed to leave your countries empty? \spc{3}
+
+\subquestionwithpoints{3} [Extra Credit] Given that all players can leave countries empty, how many total initial board arrangements are there given one deal of the 30 cards? \spc{3}
+
+\subquestionwithpoints{3} [Extra Credit] Given that all players can leave countries empty, how many total initial board arrangements are there? In this case, all possible arrangement of 30 cards to six players are possible. \spc{3}
+
+\subquestionwithpoints{4} Once the countries of the world are divvied up and the players apportion their armies, the gameplay starts. A player's turn consists of choosing adjoining countries to invade and going to \qu{battle.} Battle consists of the attacker first rolling a 6 sided fair die whose faces are labeled: 1, 2, 3, 4, $\skull$ (Skull-Bones) and a \textcircled{$\star$} (Bonus). Draw a probability tree for the outcomes of the attacker dice roll. \spc{7}
+
+\subquestionwithpoints{4} Rolling the die ten times yields the following outcome: 1, $\skull$, $\skull$, $\skull$, $\skull$, $\skull$, 4, 4, 4, 4. What is the probability of this event? \spc{3}
+
+%\subquestionwithpoints{3} You rolled three times and got Skull-Bones each time. What is the probability of getting Skull-Bones on the next roll \textit{conditional} on your previous three rolls of Skull-Bones? \spc{4}
+
+\subquestionwithpoints{5} The attacker rolls first. If he rolls a $\skull$, he immediately loses.  By \qu{lose} we mean he loses one of the armies located in his attacking country. Assuming he wins on every other face of the die --- the 1, 2, 3, 4 and bonus (as assumptiong we will modify in later questions), what is the probability he wins \textit{at least once} in 13 rolls if he begins with 13 armies? \spc{7}
+
+\subquestionwithpoints{9} The defender die also has six sides with the following outcomes: 1, 2, 3, 3, 4, 4. This die is also fair. Now we can fully explain how one battle cycle works. The attacker goes first. If he gets a $\skull$, he automatically loses, if he gets a \textcircled{$\star$}, he gets a bonus card and rolls again. If he gets a number, the defender then rolls. The attacker wins on a tie. What is the probability the attacker wins one battle cycle? \spc{17}
+
+\subquestionwithpoints{5} What is the probability the attacker wins given that he rolls a 2? \spc{3}
+
+\subquestionwithpoints{5} What is the probability the attacker rolled a $\skull$ given that the defender won? \spc{3}
+
+\eenum
+
+\problem Some theoretical questions are below. The subparts are all independent unless otherwise indicated.
+
+\benum
+
+\subquestionwithpoints{4}  Imagine a finite sample space $\Omega = \braces{\omega_1, \omega_2, \ldots, \omega_n}$ of equally likely outcomes. Your friend tries to argue that all event elements in $2^\Omega$ have equal probability. Show that your friend is wrong via a mathematical proof. \spc{3}
+
+\subquestionwithpoints{4}  Consider sets $C, D, E, F, G, H$ such that $C \subset D \subset E \subset F \subset G \subset H$. Prove that $\prob{D} < \prob{G}$. You can feel free to use theorems from class and your knowledge of set theory. \spc{3}
+
+\subquestionwithpoints{4}  Imagine that the probability of $A$ is greater than a half. Prove that the probability of $\Omega \backslash A$ is less than a half. \spc{3}
+
+
+\subquestionwithpoints{3}  What is $\mathbb{Q} \cup \integers \cup \naturals$? \spc{0}
+
+\subquestionwithpoints{4} It is known that $A_1, A_2, \ldots, A_n$ are collectively exhaustive but otherwise arbitrary. Fill in the circle: $\sum_{i=1}^n \prob{A_i}$ \textcircled{} 1 with one of the following relation symbols: $<, >, \leq, \geq, =$ or $\neq$ and explain why this is the answer in one or two sentences. \spc{2.5}
+
+
+\subquestionwithpoints{3} [Extra Credit] Show that $\cprob{A^C}{B^C} = 1 + \frac{\prob{A,B} - \prob{A}}{1 - \prob{B}}$. \spc{3}
+
+
+\subquestionwithpoints{4}  In the expansion of $\tothepow{w + x + y+ z}{6}$, how many terms are $x^3 y^3$? Your final answer must be a number \textit{only}. No other notation is allowed. Of course you can use other notation to arrive at your final result.\spc{1.5}
+
+\subquestionwithpoints{5}  A coin of unknown fairness is flipped 1,000,000 times and you observe 499,958 heads. Explain in a few sentences or less if you believe the coin is fair by interpreting this experimental data according to the long run frequency definition of probability. \spc{3}
+
+\subquestionwithpoints{5}  Assume the same experimental data as in the previous question except now we know the coin is fair. Explain in a few sentences or less the interpretation of this experimental data according to the propensity definition of probability. \spc{3}
+
+\eenum
+
+\end{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%5
+
+\problem You are playing a game with six balls. On each ball, a large letter is printed:
+
+\begin{center}
+\Huge\textcircled{\large O}
+\Huge\textcircled{\large O}
+\Huge\textcircled{\large P}
+\Huge\textcircled{\large W}
+\Huge\textcircled{\large W}
+\Huge\textcircled{\large W}
+\end{center}
+
+\normalsize
+\noindent Also on each ball there is also a unique 36 digit alphanumeric serial number (not illustrated above). Imagine the balls were thrown into a urn and the urn was shook and the balls were taken out one-by-one without looking at which ball is which until all six balls are picked.
+
+\benum
+\subquestionwithpoints{3} How many ways are there to order the six balls if the serial numbers are distinct? You do not have to compute the answer numerically. \spc{1}
+
+\subquestionwithpoints{4} How many ways are there to order the balls if you disregard the serial number but only care about the letter displayed on the ball? You must compute the answer explicitly. \spc{1.5}
+
+\subquestionwithpoints{6} What is the probability of spelling \qu{POWWOW} (in that order) from your draw of six balls by using counting methods only. The next problem requires the conditional probability calculation. Compute explicitly.\spc{2}
+
+%
+%\subquestionwithpoints{6} What is the probability of spelling \qu{POWWOW} (in that order) from your draw of six balls? Use many Bayes Rules. Write the answers in the spaces provided below. Then combine them together to arrive at the answer. Hopefully it is the same answer you found in part (c). Compute explicitly.
+%
+%\beqn
+% \prob{\text{1st ball is drawn \qu{P}}}  &=&\\
+% \cprob{\text{2nd ball is drawn \qu{O}}}{\text{\qu{P} is already drawn}}  &=&\\
+% \cprob{\text{3rd ball is drawn \qu{W}}}{\text{\qu{PO} is already drawn}}  &=&\\
+% \cprob{\text{4th ball is drawn \qu{W}}}{\text{\qu{POW} is already drawn}}  &=&\\
+% \cprob{\text{5th ball is drawn \qu{O}}}{\text{\qu{POWW} is already drawn}}  &=&\\
+% \cprob{\text{6th ball is drawn \qu{W}}}{\text{\qu{POWWO} is already drawn}} &=&\\
+%\line(1,0){300} &\line(1,0){20}& \line(1,0){110}\\
+%\text{Therefore,}~~ \prob{\text{\qu{POWWOW}}} &=& 
+%\eeqn
+
+\subquestionwithpoints{6} Instead of drawing all six balls, you draw four without replacement. What is the probability of getting one \qu{P,} one \qu{O,} and two \qu{W}'s in no specific order? You do not need to compute explicitly; you can leave your answer in choose notation. \spc{2.0}
+
+\eenum
+
+\pagebreak
+
+\problem In this problem, you are one of the military commanders defending Manhattan island from an attacking entourage. You are in charge of defending the island from a fleet \begin{wrapfigure}{r}{2in}
+\vspace{-1cm}
+  \begin{center}
+    \includegraphics[width=2in]{manhattan.png}
+  \end{center}
+\vspace{-1.6cm}
+\end{wrapfigure}   of tanks which intelligence has informed you can enter the island \textit{only }through its large bridges (tunnels or minor bridges cannot accomodate their tanks). The map to the right marks their strategic points of entry. You do not know of the attacker's plans, but you know your best chance of defending the city is to line the points of entry with anti-tank battalions. You have 20 such battalions at your disposal.
+
+There are seven point of entry bridges marked in black. Clockwise from the top middle:
+\vspace{-0.25cm}
+\begin{itemize}
+\setlength{\itemsep}{-6pt}
+\item the George Washington bridge
+\item the Alexander Hamilton and Washington bridge
+\item the Triborough (Robert F Kennedy) bridge
+\item the Queensboro bridge
+\item the Williamsburg bridge
+\item the Manhattan bridge
+\item the Brooklyn bridge
+\end{itemize}
+\vspace{-0.25cm}
+Assuming that the attacker will attack through all points of entry, you need to place \textit{at least} one anti-tank battalion at each bridge. \\ \vspace{0.4cm}
+
+\benum
+\subquestionwithpoints{5} How many different ways to arrange your battalions exist? Assume each of your battalions are the same but each bridge is different. Remember, you need at least one battalion at each entry point. You do not need to compute the answer explicitly.
+\spc{3}
+
+\subquestionwithpoints{3} [Extra Credit] Now assume each of your battalions are \textit{not }the same and each bridge is still different. How many different ways to arrange your battalions exist now? You do not need to compute the answer explicitly.
+\spc{3}
+
+\eenum
+
+
+\problem This short-answer section will ask basic questions about set theory and the mathematical definition of probability.
+
+\benum
+
+\subquestionwithpoints{3} If $A \cup B = \Omega$ then $A \backslash B = \varnothing$ always. Circle one:~~ True ~~ False
+
+%\subquestionwithpoints{2} If $A \cap B = \Omega$ then $A \cup B = \Omega$ always. Circle one:~~ True ~~ False
+
+\subquestionwithpoints{3} If $A \cap B = \Omega$ then $A \backslash B = \varnothing$ always. Circle one:~~ True ~~ False
+
+\subquestionwithpoints{3} If $A \cup B = (A \backslash B) \cup (B \backslash A)$ always. Circle one:~~ True ~~ False
+
+\subquestionwithpoints{2} Below is Boole's inequality (AKA Bonferroni's inequality):
+
+\beqn
+\prob{\bigcup_{i=1}^n A_i} \leq \mysum{i}{1}{n}{\prob{A_i}}.
+\eeqn
+
+Under what condition(s) is Boole's inequality an equality (\ie $=$ and not $<$)? If $A_1$, $A_2$, \ldots are \line(1,0){50}.~~ Fill in the blank below using the terminology we learned in class. \spc{2}
+
+\subquestionwithpoints{6} Prove that if $A \subset B$ then $\prob{A} \leq \prob{B}$. If you use some of the three conditions (axioms) or probabilitiy, you must state that axiom clearly and define it. If you use a fact from set theory, you must say so as well. \spc{9}
+
+\eenum
+
+\problem We will be considering the event $A = \braces{\text{Prof. Kapelner's favorite color is purple}}$.
+
+\benum 
+
+\subquestionwithpoints{2} Posit a numeric solution for the value of $\prob{A}$. There are many correct answers but many incorrect answers as well. You do not need to justify your answer. \spc{1}
+
+\subquestionwithpoints{4} Explain why the long run frequency definition of probability (the one provided by the textbook) would be useless in providing a solution for $\prob{A}$. Answer \textit{in English}. \spc{5}
+
+\subquestionwithpoints{3} Which of the four definitions of probability we discussed in class did you use to answer part (a)? The next question asks why. You can just write the one word answer here. \spc{2}
+
+\subquestionwithpoints{4}  Why is this the definition you used? Answer \textit{in English}. 
+
+%\subquestionwithpoints{2} In the previous question (part c), does the definition you wrote about have an \qu{epistemological} or \qu{objective} interpretation? You do not need to say why. \spc{1}
+
+
+\eenum
+\pagebreak
+
+\problem You play a game with your friend. You take a bunch of coins and tape them together. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.5in]{coins.png}
+\end{figure}
+\FloatBarrier
+
+
+\noindent Now, when tossing this bundle of coins, there are three possibilities: heads, tails and side, $\Omega = \braces{H, T, S}$, but they are not equally likely. You estimate that $\prob{\braces{H}} = \prob{\braces{T}} = 5/11$ and $\prob{\braces{S}} = 1/11$. Use these numbers to answer the questions below.
+
+\benum
+
+\subquestionwithpoints{3} What is the probability you toss the coin bundle three times and get $HTS$ in that order? No need to compute the solution explicitly.\spc{3}
+
+\subquestionwithpoints{3} What is the probability you toss the coin bundle and get a \qu{side} given that you previously got a head and before that got a tail? That is, find $\cprob{S_3}{H_1, T_2}$ where the subscripts reference the chronological order of the three tosses. Compute explicitly.\spc{3}
+
+
+\subquestionwithpoints{4} What is the probability you toss the coin bundle three times and get at least one head or at least one tail? The word \qu{or} here means non-exclusive or which in English is commonly phrased \qu{and/or.} No need to compute the solution explicitly.\spc{3}
+
+
+\subquestionwithpoints{6} You play a game with your friend using this coin bundle. Here are the rules: 
+
+\begin{itemize}
+\item If you get a heads and he gets a tail, you win. 
+\item If you get a tail and he gets a head, he wins. 
+\item If you both get a head, you play again. 
+\item If you both get a tail, he wins. 
+\item If there is a side flipped, immediately flip again. 
+\end{itemize}
+
+Draw a tree for this game. The tree should have three levels (1) your toss, (2) your friend's toss and (3) the outcome. For the outcome, you should mark \qu{win} with \qu{W} and \qu{lose} with \qu{L}. Make sure you indicate the probabilities at all branches between all levels. For tree recursions, denote the probability of winning as $p$. Do not calculate marginal probabilities for final disjoint outcomes. Remember, $\prob{\braces{H}} = \prob{\braces{T}} = 5/11$ and $\prob{\braces{S}} = 1/11$.\spc{8}
+
+
+\subquestionwithpoints{3} [Extra Credit]  What are fair \qu{odds against} for you winning this game? This is the dollar amount you would get if you wager \$1 and you win the game. Remember, you must answer in $x : 1$ format where $x$ is a number. Compute explicitly. \spc{2}
+
+\eenum
+\pagebreak
+
+\problem This short-answer section will ask basic questions about random variables.
+
+
+\benum
+\subquestionwithpoints{3} You are given $Y \sim \uniformdiscrete{\text{zebra, giraffe, lion, gazelle}}$. Is this a random variable? Answer yes or no; no need for justification.\spc{2}
+
+\subquestionwithpoints{3} You are given $X \sim \uniformdiscrete{2,4,6,8}$. What is the support of this r.v.?\spc{2}
+
+
+\subquestionwithpoints{4} You are given $X \sim \uniformdiscrete{2,4,6,8}$. Draw its PMF.\spc{5}
+
+
+\subquestionwithpoints{4} You are given $X \sim \uniformdiscrete{2,4,6,8}$. Draw its CDF.\spc{5}
+
+\subquestionwithpoints{3} You are given $X \sim \uniformdiscrete{2,4,6,8}$. Does this r.v. have any parameters? Write \qu{yes} or \qu{no.} There is no need for explanation.\spc{2}
+\eenum
+\pagebreak
+
+\problem A drivers education website requires students to read an essay on drunk driving as part of its curriculum. Below is an excerpt:
+
+\begin{quotation} \sf
+\noindent As more alcohol is consumed the risk of getting into a vehicular accident if the person drives grows. For example, a man that weighs about 160 pounds would have a BAC of 0.04 an hour after drinking two beers. It's still way below the limit of driving under the influence but the likelihood of getting into an accident is 1.4 times more probable than [the national average]. Add two more beers then the probability goes up tenfold. Make it a six pack with two more beers, the drinker reaches the limit of 0.10 BAC and \sethlcolor{gray}\color{white} \hl{the risk is now 37 times more than [the national average]}. \color{black} Add two more for the road and you reach 0.15 BAC well above the legal limit and the risk is now 380 times than the [the national average]. Drunk driving is never an option...
+\end{quotation}
+
+During another part of the curriculum, they read excerpts of the National Safety Council's (NSC) report on traffic fatalities countrywide:
+
+\begin{quotation} \sf
+\noindent The motor-vehicle death rate per 100,000,000 vehicle-miles was 1.54 in 2005...
+\end{quotation}
+
+The typical distance between a friend's apartment and the home apartment is 10 miles. Denote the event of getting into an accident during these 10 miles as ``A." Denote the event of driving while mostly drunk on a weekend night (\ie 0.10 BAC) as ``D." Please use this notation going forward for full credit.
+
+Using the NSC report's figures, we are going to crudely approximate the probability of someone getting into an accident within those typical 10 miles as:
+
+\beqn
+p := \prob{A} \approx \frac{1.54 }{100,000,000} \times 10 = 1.54 \times 10^{-7}.
+\eeqn
+
+We will also need to know how many people are drunk and behind the wheel. According to the National Highway Traffic Safety Administration (NHTSA) report,
+
+\begin{quotation} \sf
+\noindent ...In 2007 over two percent of weekend night-time drivers had blood alcohol concentrations 
+(BAC) above the legal limit (greater than 0.08g/dL)...
+\end{quotation}
+
+Since we are interested in a BAC of 0.10 (mostly drunk), we will be conservative and halve this number and round. Thus, we approximate 
+
+\beqn
+\prob{D} = 1\%.
+\eeqn
+
+ A staggering number, but one that is most likely about right. Be careful out there on the road... \pagebreak
+
+\benum
+
+\subquestionwithpoints{5} Use our crude approximations of $\prob{A}$ and $\prob{D}$ with the risk multiple found in the driver's ed manual essay to compute the probability of getting into a fatal accident while driving home from a friend's party on Saturday night after the driver drank heavily. Part of this question is defining what we are looking for using our notation of $A,~D,~A^C,~D^C$ and the conditional probability function. No need to compute explicitly: you can leave your answer in terms of $p := \prob{A}$. \spc{2}
+
+\subquestionwithpoints{8} If you got into an accident, what was the probability you were drinking heavily? Use our notation of $A,~D,~A^C,~D^C$ and the conditional probability function. No need to compute explicitly: you can leave your answer in terms of $p := \prob{A}$. \spc{8}
+
+\subquestionwithpoints{3} [Extra Credit] Compute explicitly the accident risk of driving drunk. \spc{2}
+\vspace{3cm}
+\eenum
+
+
+
+
+\end{document}
+

@@ -1,0 +1,338 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+\title{MATH 241 Spring 2015 Homework \#7}
+
+\author{Professor Adam Kapelner} % STUDENTS: put your name and section here e.g. 
+%\author{John Doe, Section A} %MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
+
+
+\iftoggle{professormode}{
+\date{Due 5PM, Wednesday, Apr 1, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. But for this homework set, read the relevant parts of Chapter 4 about the geometric r.v. and the expectation operator of r.v.'s.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}, \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. If the problem asks you for a computation, \textbf{round to two or three decimals (do not answer in an exact fraction).}
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized \textbf{20 points for the first day and 50 points thereafter due to spring break}.
+
+Between 1--15 points are arbitrarily given as a bonus (conditional on quality) if the homework is typed using \LaTeX~ (15 points only if it is perfect \LaTeX). Links to instaling \LaTeX~and program for compiling \LaTeX~are found on the syllabus. You are encouraged to use \url{overleaf.com} (make sure you upload both the hwxx.tex and the preamble.tex file). If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert as a figure or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. \textbf{Handing it in without this printout is NOT ACCEPTABLE.} You will have to redo it. 
+
+Keep this page printed for your records. Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{0.5cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak \\
+}
+
+\problem We will do a few short questions asking which r.v. to use and why. We will be investigating this by imagining a trip the grocery store to buy ingredients for guacamole.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{avocados.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem You buy \textit{one} avocado at the grocery store which is mushy. Thus, it may have brown inside because it's partially rotten. Call this probability of rottenness $p$. Model the number of \textit{good} avocados you have using a random variable. Call this r.v. $X$. Hint: the number of good avocadoes is either zero or one since you buy one and if it's good, you have one; if it's bad you have zero. Please remember the probability of rottenness is $p$ and I'm asking for the probability of the avocado being good \ie not rotten. All you need to write is $X \sim$ something. You do not need to write the PMF, draw the PMF, draw the CDF, nor contemplate the meaning of life in the next centimeter of white space. \spc{1}
+
+\easysubproblem You buy 10 avocadoes. Assume the draws of avocadoes are independent. Model the number of \textit{good} avocados you have using a random variable. Please remember the probability of rottenness is $p$ and I'm asking for good avocados \ie not rotten. Call this r.v. $X$ and write $X \sim$ something below. \spc{1}
+
+
+\easysubproblem Comment on why the r.v. you created in (b) is the sum of many $\iid$ r.v.'s you modeled in (a).  \spc{3}
+
+\easysubproblem Write the PMF for the r.v. you created in (b). \spc{1}
+
+\easysubproblem Write the support for the r.v. you created in (b).  \spc{1}
+
+\easysubproblem Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you get 3, 4, 5 or 6 good avocados. Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  \spc{2}
+
+
+\easysubproblem If you did this activity (bought 10 avocadoes) many times, what would be the average number of rotten avocadoes you get?  \spc{1}
+
+\easysubproblem If you did this activity once, what is the expcted number of rotten avocadoes you get?  \spc{1}
+
+\easysubproblem Now you do another activity. You take one avocado, cut it open and see if it's rotten. You keep doing this until you see a rotten avocado. Model the number of avocados you cut open using a r.v. Call this r.v. $X$.  \spc{1}
+
+\easysubproblem Write the PMF for the r.v. you created in (f).  \spc{1}
+
+\easysubproblem Write the support for the r.v. you created in (f).  \spc{1}
+
+\easysubproblem What is the probability you stop when looking at the third avocado?  \spc{1}
+
+\easysubproblem Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you stop between 4 and 37 avocados (including 4 and including 37). Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  \spc{2}
+
+
+\intermediatesubproblem Let's say you learned how to detect rotten avocadoes and you used this learning to select new avocados. What assumption is violated?  \spc{2}
+
+\intermediatesubproblem Let's say there were two baskets of avocados at the grocery store. The first basket comes from California-grown avocados and the second basket comes from Mexican-grown avocados. At some point in your picking of avocados you move from one basket to the other. What assumption is violated now?  \spc{2}
+
+\end{enumerate}
+
+
+\problem We didn't cover the Poisson r.v. in class, so here's an introduction to it. The Poisson will not be covered on the exam, but I may give you a new r.v. with its PMF and ask you to make do just like I do here. \\
+
+\qu{$X \sim \poisson{\lambda}$} means sandom variable $X$ is Poisson-distributed with parameter $\lambda$. The Poisson is the limit of the binomial as $n$ gets large and $p$ gets small where $\lambda = n \times p$. Thus is $n$ increases without bound, the support must be the binomial's support with $n \rightarrow \infty$. Thus, $\support{X} = \braces{0, 1, \ldots} = \naturals_0$. The Poisson can be thought of as infinite $\iid$ Bernoulli trials where $p \approx 0$. The PMF is given below:
+
+\beqn
+p(x) = \frac{e^{-\lambda} \lambda^x}{x!}
+\eeqn
+
+We will use this probability model to model traffic accidents on Queens Boulevard. Queens Blvd. is known by some as the \qu{Boulevard of Death} (you can read the Wikipedia information \href{http://en.wikipedia.org/wiki/Queens_Boulevard#Boulevard_of_Death}{here}). 
+
+
+
+Fatal pedestrian accidents on Queens Blvd. since 2001 is presented in the table below:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccccccc}
+2001 & 2002 & 2003 & 2004 & 2005 & 2006 & 2007 \\ \hline
+4&2&5&1&2&2&1
+\end{tabular}
+\caption{Number of pedestrian accidents by year.}
+\label{tab:qbacc}
+\end{table}
+
+
+
+\begin{enumerate}
+
+
+\easysubproblem Calculate the sample average $\xbar$ from Table 1. \spc{1}
+
+\easysubproblem Consider the data in Table 1 above to be $\iid$ draws from the distribution discussed in the problem header. Thus, the accidents for 2001 -- 2007 can be thought of as:
+
+\beqn
+X_{2001}, X_{2002}, \ldots, X_{2007} \iid \poisson{\lambda}
+\eeqn
+
+Let:
+
+\beqn
+\Xbar := \frac{X_{2001} + X_{2002} + \ldots + X_{2007}}{7}
+\eeqn
+
+Is $\xbar$, the sample average  using the data in Table~\ref{tab:qbacc} (your answer to part a) a realization from $\Xbar$ the \qu{average r.v.?} Yes or no is fine.\spc{1}
+
+\easysubproblem If we had many more years of data than the 7 years, what would $\Xbar$ converge to eventually? You can use notation from class. Do not answer using a number. \spc{1}
+
+\easysubproblem What is the law we used in (c)? Look in your notes. State the law and write a sentence about what it means to you \textit{in English}.\spc{3}
+
+\easysubproblem In problem 5 you prove that $\expe{X} = \lambda$ if $X \sim \poisson{\lambda}$. Assume this as fact. Now pretend 7 years of data is as good as infinite years of data and use your answer to (a) to approximate $\lambda$ using the fact from (c). Write \qu{$\lambda \approx$ something} below. \spc{1}
+
+\easysubproblem Now, build a general model for number of annual pedestrian accidents. \qu{$X \sim$ something} is all you need to write below but you need to use your answer from (e). \spc{4}
+
+\intermediatesubproblem Fill in the following table for the r.v. X you built in (j). Use three decimal places ONLY. (That goes \textbf{double }for Ilya, Joe and others). If you are feeling really lazy, check out \qu{\texttt{dpois(0:8, ---)}} and \qu{\texttt{ppois(0:8, ---)}} in \texttt{R} where the dash is your answer to (e).
+
+\begin{table}[h]
+\centering
+\Large
+\begin{tabular}{c|c|c}
+$x$ & $~~~~f(x)~~~~$ & $~~~~F(x)~~~~$ \\ \hline
+0 && \\
+1 && \\ \hline
+2 && \\
+3 && \\ \hline
+4 && \\
+5 && \\ \hline
+6 && \\
+7 && \\ \hline
+8 && \\
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\easysubproblem Find the $\quantile{X}{0.10}$.\spc{1}
+
+\easysubproblem Find the 99\%ile of $X$.\spc{0.5}
+
+\easysubproblem Find the $\median{X}$.\spc{0.5}
+
+\easysubproblem Find the $\IQR{X}$.\spc{0.5}
+
+\easysubproblem Find the $\mode{X}$.\spc{0.5}
+
+\easysubproblem Estimate the $\prob{X > 8}$ based on your calculation of $F(8)$.\spc{1}
+
+\easysubproblem Is it fair to say for a few draws of $X$ the support essentially is just $\braces{0, \ldots, 8}$? Write yes/no plus a sentence explanation.\spc{1}
+
+\hardsubproblem Using your answer from (m), what is the probability in \textit{100 years} of data you see \textit{more than 1 year} with the number of pedestrian accidents greater than 8?\spc{2.5}
+
+\hardsubproblem This is a preview of what's to come when we get to Statistics. Consider the hypothetical scenario where Queens Borough President Melinda Katz institutes new safety precautions for Queens Blvd. In 2015, the number of accidents drop to 0. Based on the table you completed in (k), can you say with assurance that this drop was due to President Katz's efforts? Why or why not? Justify using a number and a sentence \textit{in English}.\spc{4}
+
+\end{enumerate}
+
+
+\problem We are going to return to our in-class discussion of the my ride from my office to my apartment in Forest Hills using the Uber Taxi service. Since Queens is in New York City, I will be modeling based on Uber NYC rates. The current rates are posted \href{https://www.uber.com/en-US/cities/new-york}{here}. I have extra incentive now to provide you with a realistic model. Thanks for helping me plan my budget!
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{uber.png}
+\end{figure}
+\FloatBarrier
+}
+
+For the purposes of this exercise, assume there are only two routes in which to drive back. This is close to realistic. There is the \qu{Van Wyck} (outlined in black on the right below) and \qu{Jewel Ave} which is the Q64 bus route (outlined in black on the left below).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{route1.png}~~\includegraphics[width=3in]{route2.png}
+\end{figure}
+\FloatBarrier
+}
+
+The only determinant of route selection is whether or not there is traffic on the Van Wyck. If there is traffic, I take Jewel Ave route; if not, I take the Van Wyck route. The probability of traffic on the Van Wyck is 30\%. The Jewel Ave route is 2.3 miles and takes 10 min and the Van Wyck route is 6 min and is 3.6 miles.
+
+\begin{enumerate}
+\easysubproblem Let $W$ be the r.v. which models the time I travel in the Uber Taxi. What is its distribution? Use the notation we used in class.\spc{2}
+
+\easysubproblem What is $\support{W}$?\spc{1}
+
+\easysubproblem Compute $\expe{W}$ from the definition of expectation.\spc{2}
+
+\easysubproblem Write a sentence that synthesizes what part (c) means.\spc{1}
+
+\easysubproblem Let $D$ be the r.v. which models the distance I travel in the Uber Taxi. What is its distribution? Use the notation we used in class.\spc{2}
+
+\easysubproblem Compute $\expe{D}$.\spc{2}
+
+\hardsubproblem Are the r.v.'s $W$ and $D$ dependent? Justify your answer \textit{in English}.\spc{3}
+
+\easysubproblem Write a sentence that synthesizes what part (f) means.\spc{1}
+
+\easysubproblem UberX charges \$0.40\textbackslash min. Let $M$ be the r.v. which is what I pay for time on my trip home. Find the distribution of $M$.\spc{2}
+
+\easysubproblem Write $M$ as a function of $W$.\spc{1}
+
+\easysubproblem Calculate $\expe{M}$ based on the formula we learned in class about expectations of r.v.'s scaled by a constant.\spc{1}
+
+\easysubproblem UberX charges \$2.15\textbackslash mi of distance covered. Let $L$ be the r.v. which is what I pay for mileage on my trip home. Find the distribution of $L$.\spc{2}
+
+\easysubproblem Write $L$ as a function of $D$.\spc{1}
+
+\easysubproblem Calculate $\expe{L}$ based on the formula we learned in class about expectations of r.v.'s scaled by a constant.\spc{1}
+
+\easysubproblem Uber also includes a base fare of \$3. Let $B$ be the r.v. which models the total bill for my uberX ride. Write $B$ as a function of $W$ and $D$.\spc{3}
+
+\intermediatesubproblem We didn't really cover this in class, but you should be able to do it. $W$ and $D$ are one-to-one so the scaled $W$ and scaled $D$ sum is really one r.v. Find $\expe{B}$ based also on the formula we learned in class about the expectation of a r.v. with a constant added. \spc{3}
+
+\easysubproblem Write a sentence that synthesizes what part (p) means.\spc{1}
+
+\hardsubproblem UberBLACK is the original Uber taxi service. They dispatch a luxury black sedan to pick me up. The base fare is \$7 and they charge \$0.65\textbackslash min and \$3.75\textbackslash mi. Calculate $\expe{B}$ where $B$ is now the total bill for UberBLACK.\spc{3}
+
+\end{enumerate}
+
+\problem This is the fun part of the homework. You're going to repeat the experiments we did in class. 
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.3in]{coins.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem Write the definitions of \qu{datum} and \qu{data} from class. Not from the dictionary! \spc{2}
+
+\easysubproblem Why are r.v.'s also called \qu{data generating processes?} \spc{2}
+
+\easysubproblem Grab a cup and 8 pennies (or nickels, or dimes, etc). Use a magic marker to mark four of them (front and back). If you shake the cup and pull out three coins, let $X$ be the r.v. for how many marked coins you pull out? How is $X$ distributed? Write \qu{$X \sim$ something} below.\spc{1}
+
+\easysubproblem Using as fact that $\expe{X} = n\frac{K}{N}$ when  $X \sim \hypergeometric{n}{K}{N}$ (see Problem 5), calculate $\expe{X}$ for the r.v. you constructed in part (c). \spc{3}
+
+\easysubproblem Shake the cup and take out 3 coins. How many were marked? Repeat this five times. 
+Record your data below. That is, just write down the five numbers separated by commas.\spc{1}
+
+\easysubproblem Find $\xbar$ from the data you recorded in part (e). \spc{0.5}
+
+\easysubproblem Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? \spc{1}
+
+\easysubproblem Now forget that the coins are marked. If you shake the cup and flip all 8 coins, let $X$ be the r.v. for how many heads are flipped. How is $X$ distributed? Write \qu{$X \sim$ something} below.\spc{1}
+
+\easysubproblem Using the fact we proved in class that $\expe{X} = np$ when $X \sim \binomial{n}{p}$, calculate $\expe{X}$ for the r.v. you constructed in part (i). \spc{1}
+
+\easysubproblem Shake the cup and count the number of heads. Repeat this five times. 
+Record your data below. \spc{1}
+
+\easysubproblem Find $\xbar$ from the data you recorded in part (l).  \spc{0.5}
+
+\easysubproblem Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? \spc{1}
+
+
+\easysubproblem Now imagine one coin in the cup and success is defined as getting a head. Further imagine that you don't stop flipping this coin until you get a head. Let $X$ be the r.v. for how many flips you make. How is $X$ distributed? Write \qu{$X \sim$ something} below. \spc{1}
+
+\easysubproblem Using the fact we proved in class that $\expe{X} = 1/p$ when  $X \sim \geometric{p}$, calculate $\expe{X}$ for the r.v. you constructed in part (o). \spc{1}
+
+\easysubproblem Flip until you get a head. Repeat this five times. Record your data below. \spc{1}
+
+\easysubproblem Find $\xbar$ from the data you recorded in part (r).  \spc{0.5}
+
+\easysubproblem Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? \spc{1}
+
+\easysubproblem Now imagine one coin in the cup and success is defined as getting a head. Further imagine that you don't stop flipping this coin until you get two heads on at least two independent tosses. Let $X$ be the r.v. for how many flips you make. How is $X$ distributed? Write \qu{$X \sim$ something} below. \spc{1}
+
+\easysubproblem Using as fact that $\expe{X} = r/p$ when $X \sim \negbin{r}{p}$ (see Problem 5), calculate $\expe{X}$ for the r.v. you constructed in part (u). \spc{1}
+
+\easysubproblem Flip until you get two heads. Repeat this five times. Record your data below. \spc{1}
+
+\easysubproblem Find $\xbar$ from the data you recorded in part (x).  \spc{1}
+
+\easysubproblem Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? Note: I tried to make another question, but \LaTeX ~crashed after (z).\spc{1}
+ 
+\end{enumerate}
+
+\problem Extra credits as promised... Googlable but more fun if you try on your own first. Do on a separate piece of paper.
+
+\begin{enumerate}
+
+\extracreditsubproblem $X \sim \hypergeometric{n}{K}{N}$. Verify $\sum_{x \in \support{X}} f(x) = 1$. 
+
+\extracreditsubproblem $X \sim \negbin{r}{p}$. Verify $\sum_{x \in \support{X}} f(x) = 1$.
+
+\extracreditsubproblem $X \sim \poisson{\lambda}$. Verify $\sum_{x \in \support{X}} f(x) = 1$.
+
+\extracreditsubproblem $X \sim \binomial{n}{p}$. Verify $\expe{X} = np$.
+
+\extracreditsubproblem $X \sim \hypergeometric{n}{K}{N}$. Verify $\expe{X} = n\frac{K}{N}$.
+
+\extracreditsubproblem $X \sim \negbin{r}{p}$. Verify $\expe{X} = \frac{r}{p}$.
+
+\extracreditsubproblem $X \sim \poisson{\lambda}$. Verify $\expe{X} = \lambda$.
+\end{enumerate}
+
+\end{document}

@@ -54,4 +54,4 @@ Location: Delaney 112
 
 ## Grades and Class Standing
 
-You will be able to check your grades in realtime at [http://qcgrades.com](http://qcgrades.com) when I finish building the server. You type in your QC ID # and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.
+Youcan check your grades in realtime at [http://qcgrades.com](http://qcgrades.com). You type in your CUNYFirst ID# and a password. To receive a password, you have to email me (I cannot post them due to privacy concerns). Do not share your password with anyone.

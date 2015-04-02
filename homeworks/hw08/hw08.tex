@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+\title{MATH 241 Spring 2015 Homework \#8}
+
+\author{Professor Adam Kapelner} % STUDENTS: put your name and section here e.g. 
+%\author{John Doe, Section A} %MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
+
+
+\iftoggle{professormode}{
+\date{Due \textit{in class}, Tuesday, Apr 14, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. But for this homework set, read about expectation, variance and standard deviation.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}, \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. If the problem asks you for a computation, \textbf{round to two or three decimals (do not answer in an exact fraction).}
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized \textbf{10 points per day} up to a maximum of 50 points. Read more about this policy in the syllabus.
+
+Between 1--15 points are arbitrarily given as a bonus (conditional on quality) if the homework is typed using \LaTeX~ (15 points only if it is perfect \LaTeX). Links to instaling \LaTeX~and program for compiling \LaTeX~are found on the syllabus (please read carefully).
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. \textbf{Handing it in without this printout is NOT ACCEPTABLE.} There is also a redo policy which you can read about in the syllabus.
+
+Keep this page printed for your records (if using \LaTeX, this page will not show but a shortened header appears). Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{2cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak \\
+}
+
+\iftoggle{professormode}{
+\paragraph{Expectation and Variance} All in the title... \\ \\
+}
+
+
+\problem Imagine rolling two fair dice (no sorcery). Let $X_1$ be the r.v. corresponding to the first die and let $X_2$ be the r.v. corresponding to the second die. Let the outcome results be \$1 if you roll a 1, \$2 if you roll a 2, \ldots, and \$6 if you roll a six.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{dice.jpg}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem What brand name r.v. is $X_1$ distributed as? Write $X \sim$ something and make sure the parameters are correct. \spc{1}
+
+\easysubproblem Does $X_1 \equalsindist X_2$? Yes or no is fine. \spc{1}
+
+\easysubproblem Are $X_1$ and $X_2$ independent? Yes or no is fine. \spc{1}
+
+\easysubproblem Compute $\expe{X_1}$ from first principles. \spc{2}
+
+\easysubproblem Compute $\var{X_2}$ from first principles. \spc{2}
+
+\easysubproblem The standard deviation is also called \qu{standard error} and it sometimes denoted \qu{SE.} Use your answer in (e) to find $\se{X_i}$  for $i \in \braces{1,2}$. Please just use the square root and do not rederive the variance again from scratch.  \spc{1}
+
+\easysubproblem Draw the PMF for $X_i$  for $i \in \braces{1,2}$ and mark $\expe{X_i}$ and $\se{X_i}$ on the graph similar to how we did in class. \spc{6}
+
+\easysubproblem Imagine the game where you just double the winnings of a single roll. This would be equivalent to just multiplying the r.v. by a scale factor of 2. Calculate $\expe{2X_i}$, $\var{2X_i}$ and $\se{2X_i}$ from the formulas we learned in class.  \spc{3}
+
+\easysubproblem Draw the PMF for $2X_i$ for $i \in \braces{1,2}$ and mark $\expe{2X_i}$ and $\se{2X_i}$ that you calculated in (h) on the graph.  \spc{6}
+
+\hardsubproblem Draw the PMF for $X_1 + X_2$. This involves taking a convolution. Since convolution won't be on the midterm or final, I'm going to give a hint. There is 1 way to get 2 or 12, 2 ways to get 3 or 11, 3 ways to get 4 or 10, 4 ways to get 5 or 9, 5 ways to get 6 or 8 and 7 ways to get 7.  \spc{7}
+
+\easysubproblem Calculate $\expe{X_1 + X_2}$, $\var{X_1 + X_2}$ and $\se{X_1 + X_2}$ from the formulas we learned in class. Do not use the PMF from the last question; use the formulas from class. \spc{2}
+
+\hardsubproblem Why are the standard errors in (h) and (k) different and why is (h) larger? This involves a lot of thinking and I want a few sentences \textit{in English}.  \spc{8}
+
+\easysubproblem Imagine the general case of $X_1, \ldots, X_n \iid$ with mean $\mu$ and variance $\sigsq$. Define $\Xbar$ as we did in class. Redo the derivation of $\expe{\Xbar} = \mu$.   \spc{3}
+
+\easysubproblem Imagine the general case of $X_1, \ldots, X_n \iid$ with mean $\mu$ and variance $\sigsq$. Define $\Xbar$ as we did in class. Redo the derivation of $\se{\Xbar} = \sigma / \sqrt{n}$.   \spc{3}
+
+\easysubproblem Calculate $\expe{\Xbar_n}$, $\var{\Xbar_n}$ and $\se{\Xbar_n}$ using the definition of $\Xbar_n$ we learned in class only as a function of $n$. Hint: use the formula you just derived.  \spc{3}
+
+\hardsubproblem Imagine $n$ rolls of the dice to produce $n$  r.v.'s denoted $X_1, \ldots, X_n$ which of course are still $\iid$. Calculate $\expe{X_1 + \ldots + X_n}$, $\var{X_1 + \ldots + X_n}$ and $\se{X_1 + \ldots + X_n}$ only as a function of $n$. \spc{2}
+
+\hardsubproblem What does it mean that $\expe{\Xbar_n}$ is an unbiased estimator for $\mu$? Explain in a few sentences \textit{in English} why this is a good thing.\spc{3}
+
+\easysubproblem If $n=1000$, what is $\se{\Xbar_n}$? Does that mean it's getting really close to $\expe{\Xbar_n}$? Why or why not. \spc{2}
+
+\hardsubproblem Now you have the choice between game A --- where you roll $n$ times and average the winnings (\ie you collect $\Xbar_n$ dollars at the end) or game B --- where you roll one die and collect the amount you make on just one roll. Use your answers to the relevant previous questions (I won't tell you which ones explicitly) to explain why you would choose game A over B or vice versa. I want multiple sentences \textit{in English}. You must convince me you understand the tradeoff that game A and B are making. \spc{3}
+
+\easysubproblem Redo the derivation of the rule $\var{aX} = a^2 \var{X}$ for any discrete r.v. $X$ and any constant $a \in \reals$. \spc{3}
+
+\easysubproblem Redo the derivation of the rule $\var{X + c} = \var{X}$ for any discrete r.v. $X$ and any constant $c \in \reals$. \spc{7}
+
+\intermediatesubproblem Let $Z$ be the standardized r.v. for $\Xbar_n$. Standardization of a r.v. X is defined as subtracting its mean and dividing by its standard error. For $\Xbar$ this would be:
+
+\beqn
+Z := \frac{\Xbar - \expe{\Xbar}}{\se{\Xbar}} =\frac{\Xbar - \mu}{\frac{\sigma}{\sqrt{n}}}  
+\eeqn
+
+Prove from the formulas in class that $\expe{Z} = 0$ and $\var{Z} = \se{Z} = 1$. Hint: use those two rules about $\var{aX}$ and $\var{X + c}$ you just rederived.\spc{3}
+
+\easysubproblem Why is \qu{standardization} called \qu{standardization}?\spc{2}
+
+\intermediatesubproblem If $n=1000$ and you made $\xbar = \$4.00$, what is the $z$-score of this $\xbar$? That is if $\Xbar_n$ was standardized into the r.v. $Z$ (as in the previous question), what would be the corresponding realization of $z$ that corresponds to this $\xbar$? \spc{2}
+
+\easysubproblem We will learn later in Math 241 that $z \notin \bracks{-3,3}$ are very strange and smack of something being awry. Is something awry with making \$4.00 on average? Explain using a sentence \textit{in English}.\spc{3}
+
+\intermediatesubproblem This question was inspired by a student's question from last lecture. Returning to $X$, the dice game in the beginning of the problem (the outcome results being \$1 if you roll a 1, \$2 if you roll a 2, \ldots, and \$6 if you roll a six), you calculated variance using the definition $\var{X} := \expe{\squared{X-\mu}}$ assuming the classic squared error loss: $e(x,\mu) := \squared{x - \mu}$. Imagine we defined a new variance metric using absolute loss, $e(x,\mu) := \abss{x - \mu}$. We'll denote this \qu{new variance} with a big squiggly symbol, $\widetilde{\var{X}} := \expe{\abss{X - \mu}}$ just to make sure you don't confuse it with the standard definition of $\var{X}$. Calculate $\widetilde{\var{X}}$ and include units.\spc{2.5}
+
+\hardsubproblem $\widetilde{\var{X}}$ and $\se{X}$ have the same units but why is $\widetilde{\var{X}}$ \textit{not the same} as $\se{X}$? \spc{2}
+
+\end{enumerate}
+
+\problem More simple r.v. practice.
+
+\begin{enumerate}
+
+\intermediatesubproblem Let $X_1 \sim \bernoulli{p}$. Derive an expression for $\var{X_1}$ as a function of the parameter as we did in class.  \spc{3}
+
+\easysubproblem You know that $T_n$ is the sum of $n$ $\iid$ bernoulli r.v.s with parameter $p$. Show that $\var{T_n}$ can be easily derived using the variance-sum formula we learned in class.  \spc{3}
+
+\extracreditsubproblem On a separate sheet of paper, compute $\var{T_n}$ as a function of $n$ and $p$ using the definition of variance. \spc{10} 
+
+\intermediatesubproblem If you had complete control of both parameters $n$ and $p$, what would be the easiest manipulation to make the variance of $T_n$ as small as possible?  \spc{1}
+
+\easysubproblem Prove $\var{X} = \expe{X^2} - \musq$ for any r.v. $X$ (this is in your notes).  \spc{3}
+
+\easysubproblem Show from the definition of variance that $\var{X} \geq 0$ for any r.v. $X$.  \spc{3}
+
+\easysubproblem Show that if $\var{X} = 0$, then $X$ must be degenerate.  \spc{1}
+
+\extracreditsubproblem Show that if expected error for any $e(x,\mu)$ is 0, then $X$ must be degenerate. \spc{1}
+
+\hardsubproblem Show for any two r.v.'s $X$ and $Y$ which are independent that $\var{X \times Y} = \musq_X \sigsq_Y + \musq_Y \sigsq_X + \sigsq_X \sigsq_Y$. Remember, two r.v.'s multiplied together is a new r.v., $g(X, Y)$.  \spc{6}
+
+\easysubproblem Let $a_1, a_2, \ldots, a_n$ be a sequence of constants. Let $X_1, \ldots, X_n$ be a sequence of r.v.'s which thereby share the same mean $\mu$. Create a simplified expression for $\expe{a_1 X_1 + \ldots + a_n X_n}$. I want the simplest combination of symbols $a_1, a_2, \ldots, a_n$ and $\mu$.  \spc{2}
+
+\intermediatesubproblem Let $a_1, a_2, \ldots, a_n$ be a sequence of constants.  Assume $X_1, \ldots, X_n$ are a sequence of $\iid$ r.v.'s which thereby share the same variance $\sigsq$. Create a simplified expression for $\se{a_1 X_1 + \ldots + a_n X_n}$. I want the simplest combination of symbols $a_1, a_2, \ldots, a_n$ and $\mu$.  \spc{2}
+
+\intermediatesubproblem Imagine a r.v. $X$ with density $f(x) = c/x^2$ and $\support{X} = \naturals$. What is the exact value of $c$ which makes $f(x)$ a valid PMF? The answer can be found \href{http://en.wikipedia.org/wiki/Riemann_zeta_function}{here}.  \spc{3}
+
+\hardsubproblem  $X$ is the same as in the previous problem. Show that $\var{X}$ does not exist (which means it's not a real number). You will need a fact from that same wikipedia page that you visited in the last problem. And now you've learned what the harmonic series is too.  \spc{6}
+
+\hardsubproblem Let $Y := X^2$ where $X$ is a r.v. with PMF unknown. Use the notation $\mu$ for $\expe{X}$, $\sigsq$ for $\var{X}$, $\mu_3$ for $\expe{X^3}$ and $\mu_4$ for $\expe{X^4}$. Assume $\mu,~\sigsq,~\mu_3,~\mu_4$ all exist in $\reals$. Find $\var{Y}$ as a function of $\mu,~\sigsq,~\mu_3$ and $\mu_4$. This was the extra credit on last semester's midterm, thus the solution is online. Try to do it yourself first. \spc{4}
+
+
+\hardsubproblem Consider $X \sim \negbin{r}{p}$. Prove that $\var{X} = r(1-p)/p^2$ assuming that the variance of a geometric r.v. with parameter $p$ is $(1-p)/p^2$.  \spc{3}
+
+\intermediatesubproblem Prove the memorylessness property of $X \sim \geometric{p}$ by proving it holds for the definition of memorylessness i.e. $\prob{X > x} = \cprob{X > x_0 + x}{X > x_0}$. \spc{4}
+
+\easysubproblem I'm waiting for a defective chip of RAM (similar to a previous HW). Each piece of RAM is independent has probability of being defective of 1 in 300. I've been doing this awhile and 100 non-defective chips have passed by. What is the probability I see a defective chip on the 117th item in the production run?
+
+\end{enumerate}
+
+\end{document}

@@ -505,6 +505,36 @@ This will look at the estimated PDF for $C_n$ for $n = 2, 5, 10, 50, 100, 1000$.
 
 \end{enumerate}
 
+\problem Now that we've now proven the CLT, we are going to use it a little bit.
 
+\begin{enumerate}
+
+\easysubproblem Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+\Xbar \sim \normnot{\mu}{\squared{\frac{\sigma}{\sqrt{n}}}}
+\eeqn \spc{1.5}
+
+\easysubproblem Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+T_n \sim \normnot{n\mu}{\squared{\sqrt{n}\sigma}}
+\eeqn \spc{1.5}
+
+\easysubproblem Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+\frac{T_n - n\mu}{\sqrt{n}\sigma} \sim \stdnormnot
+\eeqn 
+
+which follows from the last question instantaneously.\spc{2}
+
+\easysubproblem Let $X_1, \ldots, X_n \iid \bernoulli{p}$ and let $\Phat := \Xbar$. Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+\Phat \sim \normnot{p}{\squared{\sqrt{\frac{p(1-p))}{n}}}}
+\eeqn \spc{1.5}
+
+\end{enumerate}
 \end{document}
 

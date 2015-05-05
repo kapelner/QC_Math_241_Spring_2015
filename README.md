@@ -49,7 +49,7 @@ My lectures can be listened to as YouTube videos below and my lecture notes are 
 
 * Midterm II - Thursday, April 16 (in class).  [(practice exam)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm2/midterm2.pdf?raw=true) [(practice exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm2/midterm2_solutions.pdf?raw=true) Also: Midterm I practice exam problem 6.
 
-* Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM) in Kiely 258.
+* Final - Thursday, May 21 (section A: 8:30-10:30AM, section B: 11AM-1PM but you can come to either exam period) in Kiely 258.  [(practice exam)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/final/final.pdf?raw=true) [(practice exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/final/final_solutions.pdf?raw=true)
 
 ## Office Hours
 

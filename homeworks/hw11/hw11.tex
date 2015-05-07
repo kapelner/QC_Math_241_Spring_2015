@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{spacingmode}
+\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+\title{MATH 241 Spring 2015 FINAL Homework (\#11)}
+
+\author{Professor Adam Kapelner} % STUDENTS: put your name and section here e.g. 
+%\author{John Doe, Section A -or- B} %MAKE SURE YOU PUT YOUR SECTION HERE!!!!!!!!
+
+
+\iftoggle{professormode}{
+\date{Due \textit{in class}, Thursday, May 14, 2015 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. But for this homework set, read about confidence intervals and hypothesis tests for one proportion.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]}, \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. If the problem asks you for a computation, \textbf{round to two or three decimals (do not answer in an exact fraction).}
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized \textbf{10 points per day} up to a maximum of 50 points. Read more about this policy in the syllabus.
+
+Between 1--15 points are arbitrarily given as a bonus (conditional on quality) if the homework is typed using \LaTeX~ (15 points only if it is perfect \LaTeX). Links to instaling \LaTeX~and program for compiling \LaTeX~are found on the syllabus (please read carefully).
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. \textbf{Handing it in without this printout is NOT ACCEPTABLE.} There is also a redo policy which you can read about in the syllabus.
+
+Keep this page printed for your records (if using \LaTeX, this page will not show but a shortened header appears). Write your name and section below where section A is if you're registered for the 9:15AM--10:30AM lecture and section B is if you're in the 12:15PM-1:30PM lecture.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1.5cm}
+NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
+\pagebreak \\
+}
+
+
+\iftoggle{professormode}{
+\paragraph{CLT Implications} In the last homework we proved the CLT, now we examine its implications.\\ \\
+} 
+
+\problem These exercises will pick up after the proof of the CLT in which we proved that for $\Xoneton \iid$ with finite first and second moments,
+
+\beqn
+C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n\mu}{\sqrt{n} \sigma} = \sqrt{n} \Zbar ~~\convd~~ \stdnormnot
+\eeqn
+
+\noindent which means that as $n \rightarrow \infty$, any of the above expressions for $C_n$ will begin to look more and more like a standard normal distribution. The one involving $\Zbar$ is the least practically useful since we don't observe standardized realizations, we observe the realizations themselves and we usually don't know $\mu$ or $\sigsq$. The one including $T_n$ is not too useful either since it is difficult to think in terms of \textit{totals} since the benchmark for what normal / weird is changes with $n$.
+
+
+\begin{enumerate}
+
+\intermediatesubproblem By far the most useful expression for $C_n$ is the one that is underbraced above. Why do you think this is? Hint: it has to do with the weakness of interpreting the $T_n$ term which I explained in the problem definition. \spc{3}
+
+\intermediatesubproblem If $\Xoneton \iid \bernoulli{p}$ then what is the $\min{\support{\Xbar_n}}$?  \spc{1}
+
+\intermediatesubproblem If $\Xoneton \iid \bernoulli{p}$ then what is the  $\max{\support{\Xbar_n}}$?  \spc{2}
+
+\easysubproblem If $\xbar$ is a realization from $\Xbar_n$, what is the smallest value it can be?  \spc{2}
+
+\easysubproblem If $\xbar$ is a realization from $\Xbar_n$, what is the largest value it can be?  \spc{1}
+
+\easysubproblem Because $\Xbar$'s support is naturally bounded in the Bernoulli experiment case, we give it a special notation: $\Phat$. Write the definition of $\Phat$ mathematically.  \spc{1}
+
+\easysubproblem What do we call $\Phat$?  \spc{2}
+
+\easysubproblem Find $\expe{\Phat_n}$ if $\Xoneton \iid \bernoulli{p}$.  \spc{2.5}
+
+\intermediatesubproblem Find $\se{\Phat_n}$ if $\Xoneton \iid \bernoulli{p}$.  \spc{2.5}
+
+\intermediatesubproblem Using your answers to (h) and (i), rewrite the underbraced expression of $C_n$ using $\Phat_n$ substitited for $\Xbar_n$ and $\mu$ and $\sigma$ also substituted using (h) and (i).  \spc{2}
+
+\hardsubproblem Use your answer to (j) and assume $n$ is big enough for the CLT to \qu{kick in} as well as what you know about normal distributions shifted and scaled to find the distribution of $\Phat_n$.  \spc{2}
+
+\intermediatesubproblem Write the PDF of $\Phat_n$. This will force you to understand (1) the generalized density for $\normnot{\mu}{\sigsq}$ which is in the notes but has never been previously asked on a homework assignment, (2) substitutions for the mean and variance and (3) what the free variable is.  \spc{3}
+
+\intermediatesubproblem Draw the PDF of $\Phat_n$ below. On the $\phat$ axis, mark a tick for the mean, and ticks for three standard errors above the mean and ticks for three standard errors below the mean. I'm giving almost a full page for this because other problems depend on it. Use 1/3 of the space for your drawing of the PDF.  \spc{18}
+
+\intermediatesubproblem Let's say $p=0.2$ and $n = 100$. What is $\prob{\Phat_n \geq 0.24}$? You will need to use shifts and scales to get it to look like $\prob{Z > z}$ where $Z$ is the standard normal and $z$ is 0.24 standardized.  \spc{3}
+
+\hardsubproblem Let's say $p=0.2$ and $n = 100$. What is the probability of realizing a $\phat$ above 0.3? Without a computer, you cannot answer this exactly. Just using the empirical rule, find the lower and upper bound of this probability. Do not answer exactly. I will not ask you to answer exactly on the test but I will ask you to find a lower and upper bound using the empirical rule.  \spc{5}
+
+\end{enumerate}
+
+
+\problem We have now used the CLT to understand the distribution of sample proportions. Here, we will assume that $p$, the true proportion of \qu{success,} is unknown and we will try to infer it. This is a problem of paramount importance. Imagine you're polling for a political candidate. You really do want to know $p$ --- the proportion of people who will vote for your candidate. Imagine you're investigating a drug with side effects. You really do want to know $p$ --- the proportion of people who suffer from that side effect.
+
+\begin{enumerate}
+
+\easysubproblem If you have realizations of $\Xoneton$, call them $\xoneton$, what is your best guess of $p$? This is called a \qu{point estimate.} Make sure to use the special notation for this estimate and define it mathematically.  \spc{2}
+
+\hardsubproblem Write \textit{in English} why $\phat \neq p$. I marked this as hard because you need to really dredge up your knowledge about random variables, realizations and parameters and get all these concepts straight.  \spc{4}
+
+\intermediatesubproblem Recall your answer to 1(k) and reference the picture in 1(l). Where are the \qu{middle} 95\% of $\phat$'s realized? When I say \qu{middle} I mean the 95\% that are closest to $p$, the true expected value. Write the interval that corresponds to this set of numbers. Use the bracket set notation we learned in lecture 1.  \spc{2}
+
+\intermediatesubproblem The interval you created in (c) left out 5\% of the density of $\Phat_n$. Write the set that corresponds to this left out set. Use the union notation from lecture 1.  \spc{2}
+
+\easysubproblem What is the width of the interval you created in (c)?  \spc{1}
+
+\easysubproblem What is the half width of the interval you created in (c)?  \spc{1}
+
+\easysubproblem In your picture in 1(l), draw a dotted line from the center of the PDF, $p$ down the length of the page. Create a realization of $\Phat$, call it $\phat$ within the interval in (c) and mark it as a solid dot. Then carefully measure using a ruler, one half width (f) from the fot to the left and one half width from (f) to the right and draw these two lines and mark the ends with a square bracket. No need to write anything below this prompt.
+
+\easysubproblem Did this interval \textit{cover} $p$? That is, does it include $p$? You can see if it includes the dotted line drawn down from $p$.  \spc{1}
+
+\easysubproblem Would all $\phat$'s realized within the interval in (c) cover $p$?  \spc{1}
+
+\hardsubproblem Prove that the probability that the interval covers $p$ is 95\%. We did this in class.  \spc{4}
+
+\easysubproblem Illustrate an example of a $\phat$ with the same half-width to the left and right interval that does \textit{not} cover $p$ in your picture of 1(l). No need to write anything here. 
+
+\intermediatesubproblem In what set do the $\phat$'s such as in (k) come from that fail to cover $p$?  \spc{2}
+
+
+\end{enumerate}
+
+
+\problem Now we'll just practice building CI's and ask some questions about the procedure.
+
+\begin{enumerate}
+
+\intermediatesubproblem Why is it important to have a simple random sample when sampling from a population? Write a couple sentences \textit{in English}.  \spc{4}
+
+\easysubproblem Write the mathematical definition of a two-sided $1-\alpha$ confidence interval below for a one-sample binomial proportion.  \spc{1}
+
+\easysubproblem In the notation above, the \qu{CI} has two subscripts. What do these two subscripts mean?  \spc{2}
+
+\hardsubproblem The above CI in (b) does not give \textit{exact} coverage, but only \textit{approximate} coverage for two separate reasons. What are the two reasons? Assume the realizations are indeed sampled from $\iid$ Bernoulli r.v.'s and it was a simple random sample.  \spc{4}
+
+\easysubproblem In class we sampled 594 M\&M's and found that 116 were blue. Compute a 95\% CI for $p$, the true proportion of blue M\&M's. Assume all of the CI assumptions are correct.  \spc{3}
+
+\easysubproblem Compute a 99\% CI for $p$, the true proportion of blue M\&M's using the same data as in (e). Assume all of the CI assumptions are correct.  \spc{4}
+
+\hardsubproblem The 99\% CI is larger than the 95\% CI. This is because $z_{\overtwo{\alpha}}$ increased because we requested wider confidence which increases the margin of error (the margin of error is the $z_{\overtwo{\alpha}}\sqrt{\frac{\phat(1-\phat)}{n}}$ term). Let's say we wanted a 99\% CI with the same width as the 95\% CI. How much more M\&M's would we have to look at to do so?  \spc{4}
+
+\intermediatesubproblem Let's say we wanted to be sure we captured $p$ in the CI. What's the problem with just making our $1-\alpha$ really large like 99.99999\%? Answer \textit{in English}.  \spc{4}
+
+\easysubproblem For the interval you created in (e) provide two valid interpretations for it \textit{in English}.  \spc{4}
+
+\easysubproblem For the interval you created in (e) write the wrong interpretation \textit{in English} --- this is the interpretation you really want to be able to say, but you just can't.  \spc{3}
+
+\hardsubproblem Explain why the wrong interpretation in (j) is wrong \textit{in English}.  \spc{3}
+
+\easysubproblem We were interested in political orientation at Queens College. We polled 100 students and 38 of them were registered democrats. Create a 95\% confidence interval for the true proportion of registered democrats at Queens College.  \spc{2}
+
+\easysubproblem To get these 100 students, imagine we asked students who were waiting at the Q64 bus stop. Would there then be any problems with the CI we created in (l)? Answer \textit{in English}.  \spc{3}
+
+\intermediatesubproblem What would be the best way to sample 100 students in order to create the most accurate CI in (l)? Answer \textit{in English}.  \spc{4}
+
+\end{enumerate}
+
+
+\problem CI's are for inference but hypothesis testing is for assessing whether a certain assumption is grounded. This will be the last topic covered on the Math 241 final. We will illustrate by using the human sex ratio example from class.
+
+\begin{enumerate}
+
+\easysubproblem We a priori assume an equal sex ratio. We'll define $p$ as the probability of being male arbitrarily. What is the null hypothesis expressed using the mathematical notation we used in class? \spc{1}
+
+\easysubproblem What would be the alternative hypothesis expressed using the mathematical notation we used in class? \spc{1}
+
+\intermediatesubproblem If $n=200$. What is the null distribution? No symbols are acceptable as an answer, you must calculate exactly what the distribution is. Draw this null distribution how we did in class. \spc{3}
+
+\intermediatesubproblem Let's say failing to find a deviation from the hypothesized equal sex ratio meant you \textit{lose your job} and you're on the street. What kind of $\alpha$ would you pick for this test. Justify using a sentence \textit{in English}. \spc{3}
+
+\easysubproblem Regardless of the $\alpha$ chosen, choose $\alpha = 1\%$. What is the acceptance region under $\alpha = 1\%$? Denote it on the drawing in (c). \spc{2}
+
+\easysubproblem What is the rejection region under $\alpha = 1\%$? Use the $\cup$ symbol to join the two sets. Denote it on the drawing in (c). \spc{2}
+
+\easysubproblem What is a Type I error in general? Answer \textit{in English}. \spc{2}
+
+\easysubproblem What does a Type I error mean in this human sex ratio experiment? Answer \textit{in English}. \spc{2}
+
+\easysubproblem What is a Type II error in general? Answer \textit{in English}. \spc{2}
+
+\easysubproblem What does a Type II error mean in this human sex ratio experiment? Answer \textit{in English}. \spc{2}
+
+\easysubproblem You count there are 113 males. Calculate $\phat$ and denote it on the drawing in (c).  \spc{2}
+
+\easysubproblem What is the result of the hypothesis test? Do you retain $H_0$ or reject $H_0$? Write a sentence in English interpreting what this means.  \spc{4}
+
+\hardsubproblem Now let $n=1000$ and use the same $\alpha =1\%$. You get 542 males. Write the hypotheses, find the acceptance region and find the result and interpret it.
+
+\end{enumerate}
+
+
+\end{document}

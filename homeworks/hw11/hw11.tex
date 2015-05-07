@@ -58,18 +58,10 @@ NAME: \line(1,0){250} ~~SECTION (A or B): \line(1,0){35}
 \paragraph{CLT Implications} In the last homework we proved the CLT, now we examine its implications.\\ \\
 } 
 
-\problem These exercises will pick up after the proof of the CLT in which we proved that for $\Xoneton \iid$ with finite first and second moments,
-
-\beqn
-C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n\mu}{\sqrt{n} \sigma} = \sqrt{n} \Zbar ~~\convd~~ \stdnormnot
-\eeqn
-
-\noindent which means that as $n \rightarrow \infty$, any of the above expressions for $C_n$ will begin to look more and more like a standard normal distribution. The one involving $\Zbar$ is the least practically useful since we don't observe standardized realizations, we observe the realizations themselves and we usually don't know $\mu$ or $\sigsq$. The one including $T_n$ is not too useful either since it is difficult to think in terms of \textit{totals} since the benchmark for what normal / weird is changes with $n$.
+\problem These exercises will pick up after the proof of the CLT.
 
 
 \begin{enumerate}
-
-\intermediatesubproblem By far the most useful expression for $C_n$ is the one that is underbraced above. Why do you think this is? Hint: it has to do with the weakness of interpreting the $T_n$ term which I explained in the problem definition. \spc{3}
 
 \intermediatesubproblem If $\Xoneton \iid \bernoulli{p}$ then what is the $\min{\support{\Xbar_n}}$?  \spc{1}
 
@@ -79,7 +71,7 @@ C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n
 
 \easysubproblem If $\xbar$ is a realization from $\Xbar_n$, what is the largest value it can be?  \spc{1}
 
-\easysubproblem Because $\Xbar$'s support is naturally bounded in the Bernoulli experiment case, we give it a special notation: $\Phat$. Write the definition of $\Phat$ mathematically.  \spc{1}
+\easysubproblem Because $\Xbar$'s support is naturally bounded in the Bernoulli experiment case (see questions a and b of this problem), we give it a special notation: $\Phat$. Write the definition of $\Phat$ mathematically.  \spc{1}
 
 \easysubproblem What do we call $\Phat$?  \spc{2}
 
@@ -87,15 +79,13 @@ C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n
 
 \intermediatesubproblem Find $\se{\Phat_n}$ if $\Xoneton \iid \bernoulli{p}$.  \spc{2.5}
 
-\intermediatesubproblem Using your answers to (h) and (i), rewrite the underbraced expression of $C_n$ using $\Phat_n$ substitited for $\Xbar_n$ and $\mu$ and $\sigma$ also substituted using (h) and (i).  \spc{2}
+\intermediatesubproblem Use your previous answers and assume $n$ is big enough for the CLT to \qu{kick in} as well as what you know about normal distributions shifted and scaled to find the distribution of $\Phat_n$.  \spc{2}
 
-\hardsubproblem Use your answer to (j) and assume $n$ is big enough for the CLT to \qu{kick in} as well as what you know about normal distributions shifted and scaled to find the distribution of $\Phat_n$.  \spc{2}
+\hardsubproblem Write the PDF of $\Phat_n$. This will force you to understand (1) the generalized density for $\normnot{\mu}{\sigsq}$ which is in the notes but has never been previously asked on a homework assignment, (2) substitutions for the mean and variance and (3) what the free variable is.  \spc{8}
 
-\intermediatesubproblem Write the PDF of $\Phat_n$. This will force you to understand (1) the generalized density for $\normnot{\mu}{\sigsq}$ which is in the notes but has never been previously asked on a homework assignment, (2) substitutions for the mean and variance and (3) what the free variable is.  \spc{3}
+\easysubproblem Draw the PDF of $\Phat_n$ below. On the $\phat$ axis, mark a tick for the mean, and ticks for three standard errors above the mean and ticks for three standard errors below the mean. I'm giving almost a full page for this because other problems depend on it. Use 1/3 of the space for your drawing of the PDF.  \spc{12}
 
-\intermediatesubproblem Draw the PDF of $\Phat_n$ below. On the $\phat$ axis, mark a tick for the mean, and ticks for three standard errors above the mean and ticks for three standard errors below the mean. I'm giving almost a full page for this because other problems depend on it. Use 1/3 of the space for your drawing of the PDF.  \spc{18}
-
-\intermediatesubproblem Let's say $p=0.2$ and $n = 100$. What is $\prob{\Phat_n \geq 0.24}$? You will need to use shifts and scales to get it to look like $\prob{Z > z}$ where $Z$ is the standard normal and $z$ is 0.24 standardized.  \spc{3}
+\intermediatesubproblem Let's say $p=0.2$ and $n = 100$. What is $\prob{\Phat_n \geq 0.24}$? You will need to use shifts and scales to get it to look like $\prob{Z > z}$ where $Z$ is the standard normal and $z$ is 0.24 standardized.  \spc{6}
 
 \hardsubproblem Let's say $p=0.2$ and $n = 100$. What is the probability of realizing a $\phat$ above 0.3? Without a computer, you cannot answer this exactly. Just using the empirical rule, find the lower and upper bound of this probability. Do not answer exactly. I will not ask you to answer exactly on the test but I will ask you to find a lower and upper bound using the empirical rule.  \spc{5}
 
@@ -106,11 +96,11 @@ C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n
 
 \begin{enumerate}
 
-\easysubproblem If you have realizations of $\Xoneton$, call them $\xoneton$, what is your best guess of $p$? This is called a \qu{point estimate.} Make sure to use the special notation for this estimate and define it mathematically.  \spc{2}
+\easysubproblem If you have realizations of $\Xoneton$, call them $\xoneton$, what is your best guess of $p$? This is called a \qu{point estimate.} Make sure to use the special notation for this estimate we used in class and define it mathematically.  \spc{2}
 
 \hardsubproblem Write \textit{in English} why $\phat \neq p$. I marked this as hard because you need to really dredge up your knowledge about random variables, realizations and parameters and get all these concepts straight.  \spc{4}
 
-\intermediatesubproblem Recall your answer to 1(k) and reference the picture in 1(l). Where are the \qu{middle} 95\% of $\phat$'s realized? When I say \qu{middle} I mean the 95\% that are closest to $p$, the true expected value. Write the interval that corresponds to this set of numbers. Use the bracket set notation we learned in lecture 1.  \spc{2}
+\intermediatesubproblem Recall your answer to 1(i) and reference the picture in 1(k). Where are the \qu{middle} 95\% of $\phat$'s realized? When I say \qu{middle} I mean the 95\% that are \textit{closest} to $p$, the true expected value. Write the interval that corresponds to this set of numbers. Use the bracket set notation we learned in lecture 1.  \spc{2}
 
 \intermediatesubproblem The interval you created in (c) left out 5\% of the density of $\Phat_n$. Write the set that corresponds to this left out set. Use the union notation from lecture 1.  \spc{2}
 
@@ -118,7 +108,7 @@ C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n
 
 \easysubproblem What is the half width of the interval you created in (c)?  \spc{1}
 
-\easysubproblem In your picture in 1(l), draw a dotted line from the center of the PDF, $p$ down the length of the page. Create a realization of $\Phat$, call it $\phat$ within the interval in (c) and mark it as a solid dot. Then carefully measure using a ruler, one half width (f) from the fot to the left and one half width from (f) to the right and draw these two lines and mark the ends with a square bracket. No need to write anything below this prompt.
+\easysubproblem In your picture in 1(k), draw a dotted line from the center of the PDF, $p$ down the length of the page. Create a realization of $\Phat$, call it $\phat$ within the interval in (c) and mark it as a solid dot. Then carefully measure using a ruler, one half width (f) from the fot to the left and one half width from (f) to the right and draw these two lines and mark the ends with a square bracket. No need to write anything below this prompt.
 
 \easysubproblem Did this interval \textit{cover} $p$? That is, does it include $p$? You can see if it includes the dotted line drawn down from $p$.  \spc{1}
 
@@ -126,7 +116,7 @@ C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n
 
 \hardsubproblem Prove that the probability that the interval covers $p$ is 95\%. We did this in class.  \spc{4}
 
-\easysubproblem Illustrate an example of a $\phat$ with the same half-width to the left and right interval that does \textit{not} cover $p$ in your picture of 1(l). No need to write anything here. 
+\easysubproblem Illustrate an example of a $\phat$ with the same half-width to the left and right interval that does \textit{not} cover $p$ in your picture of 1(k). No need to write anything here. 
 
 \intermediatesubproblem In what set do the $\phat$'s such as in (k) come from that fail to cover $p$?  \spc{2}
 
@@ -146,21 +136,19 @@ C_n = \underbrace{\frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}} = \frac{T_n - n
 
 \hardsubproblem The above CI in (b) does not give \textit{exact} coverage, but only \textit{approximate} coverage for two separate reasons. What are the two reasons? Assume the realizations are indeed sampled from $\iid$ Bernoulli r.v.'s and it was a simple random sample.  \spc{4}
 
-\easysubproblem In class we sampled 594 M\&M's and found that 116 were blue. Compute a 95\% CI for $p$, the true proportion of blue M\&M's. Assume all of the CI assumptions are correct.  \spc{3}
+\easysubproblem As in the example done in class, imagine we sampled 594 M\&M's and found that 116 were blue. Compute a 95\% CI for $p$, the true proportion of blue M\&M's. Assume all of the CI assumptions are correct.  \spc{2}
 
-\easysubproblem Compute a 99\% CI for $p$, the true proportion of blue M\&M's using the same data as in (e). Assume all of the CI assumptions are correct.  \spc{4}
+\easysubproblem Compute a 99\% CI for $p$, the true proportion of blue M\&M's using the same data as in (e). Assume all of the CI assumptions are correct. I gave you this $z_{\overtwo{\alpha}}$ value in class. \spc{2}
 
-\hardsubproblem The 99\% CI is larger than the 95\% CI. This is because $z_{\overtwo{\alpha}}$ increased because we requested wider confidence which increases the margin of error (the margin of error is the $z_{\overtwo{\alpha}}\sqrt{\frac{\phat(1-\phat)}{n}}$ term). Let's say we wanted a 99\% CI with the same width as the 95\% CI. How much more M\&M's would we have to look at to do so?  \spc{4}
+\hardsubproblem The 99\% CI is larger than the 95\% CI. This is because $z_{\overtwo{\alpha}}$ increased because we requested wider confidence which increases the margin of error (the margin of error is the $z_{\overtwo{\alpha}}\sqrt{\frac{\phat(1-\phat)}{n}}$ term). Let's say we wanted a 99\% CI with the same width as the 95\% CI. How much more M\&M's would we have to look at to do so?  \spc{6}
 
-\intermediatesubproblem Let's say we wanted to be sure we captured $p$ in the CI. What's the problem with just making our $1-\alpha$ really large like 99.99999\%? Answer \textit{in English}.  \spc{4}
+\intermediatesubproblem Let's say we wanted to be sure we captured $p$ in the CI. What's the problem with just making our $1-\alpha$ really large like 99.99999\% (or $\alpha$ really small like 0.000001\%)? Answer \textit{in English}.  \spc{4}
 
-\easysubproblem For the interval you created in (e) provide two valid interpretations for it \textit{in English}.  \spc{4}
+\easysubproblem For the interval you created in (e) provide two valid classical interpretations for it \textit{in English}.  \spc{4}
 
-\easysubproblem For the interval you created in (e) write the wrong interpretation \textit{in English} --- this is the interpretation you really want to be able to say, but you just can't.  \spc{3}
+\easysubproblem For the interval you created in (e) write the non-classical interpretation \textit{in English} --- this is the interpretation you really want to be able to say...  \spc{3}
 
-\hardsubproblem Explain why the wrong interpretation in (j) is wrong \textit{in English}.  \spc{3}
-
-\easysubproblem We were interested in political orientation at Queens College. We polled 100 students and 38 of them were registered democrats. Create a 95\% confidence interval for the true proportion of registered democrats at Queens College.  \spc{2}
+\easysubproblem We were interested in political orientation at Queens College. We polled 100 students and 38 of them were registered democrats. Create a 95\% confidence interval for the true proportion of registered democrats at Queens College.  \spc{4}
 
 \easysubproblem To get these 100 students, imagine we asked students who were waiting at the Q64 bus stop. Would there then be any problems with the CI we created in (l)? Answer \textit{in English}.  \spc{3}
 

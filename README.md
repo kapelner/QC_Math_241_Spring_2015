@@ -6,7 +6,7 @@ This is the course homepage for Math 241 for the Spring semester 2015 at Queens 
 
 My lectures can be listened to as YouTube videos below and my lecture notes are also scanned in as PDF files. To ask questions, you can comment on the videos and I will answer in another comment or in class. Make sure to include the timestamp of your comment.
 
-* Final Review, 5/14/15 
+* Final Review, 5/14/15 [(audio)](http://youtu.be/OU00z41LfY0)
 * Lecture 23, 5/12/15 [(audio)](http://youtu.be/4LkjkPySceU) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_23_May_12_2015.pdf?raw=true)
 * Lecture 22, 5/07/15 [(audio)](http://youtu.be/sdghHIrQlJs) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_22_May_7_2015.pdf?raw=true)
 * Lecture 21, 5/05/15 [(audio)](https://youtu.be/WKcOeWcDWQ8) [(notes)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/lectures/lec_21_May_5_2015.pdf?raw=true)

@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Math 241 Spring 2015 \\ Final Examination}
+\author{Professor Adam Kapelner}
+
+\date{May 21, 2015}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){270} ~~~ Section (A or B)~ \line(1,0){30}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using a cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is 120 minutes and closed-book. You are allowed three pages (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If I say \qu{compute,} this means the solution will be a number. \textbf{Please round to two decimal places.} I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil.\\
+
+\noindent The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem Some theoretical questions are below. The subparts are all independent unless
+otherwise indicated.
+
+\benum
+\subquestionwithpoints{4} Show that the moment generating function (MGF) for the r.v. $X$ where $X \sim \uniform{a}{b}$ is $M_X(t) = \frac{e^{tb} - e^{ta}}{t(b-a)}$. \spc{4}
+
+\subquestionwithpoints{4} Using the result from the last problem, find the MGF for $W \sim \stduniform$. \spc{1}
+
+\subquestionwithpoints{4} Using the result from the two previous problems, show that if $X = kW + m$ where $k$ and $m$ are constants $\in \reals$, then $X \sim \uniform{m}{m + k}$. \spc{5}
+
+\subquestionwithpoints{4} If $X_1, X_2, \ldots, X_n \iid \uniform{m}{m + k}$ and $n$ is large, what is the approximate distribution of $T$ where $T := X_1 + X_2 + \ldots + X_n$? \spc{5}
+
+\subquestionwithpoints{4} [Extra Credit] Evaluate $\displaystyle \int_\reals e^{-\squared{x - 3,142.67}} dx$ below. \spc{5}
+
+
+\subquestionwithpoints{5} Let $\displaystyle g(t) = \int_0^\infty e^{tx} \lambda e^{-\lambda x} dx$ where $\lambda \in (0, \infty)$. What is $g'(0)$? \spc{2}
+
+\subquestionwithpoints{5} State the central limit theorem. Include all assumptions. Your answer should read like \qu{If \ldots then \ldots} \spc{5}
+
+\subquestionwithpoints{4} [Extra Credit] Solve for the MGF of a discrete r.v. $X$ using a sum over the discrete sample space $\Omega$. \spc{2}
+
+\eenum
+
+\problem In this problem, we will investigate mock situations involving waiting for the Professor Kapelner's \qu{favorite} bus, the Q64 (service between Forest Hills Continental Ave and Elechester via Jewel Ave).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3in]{q64.png}
+\end{center}
+\end{figure}
+
+\benum
+\subquestionwithpoints{4} If we consider the waiting time (in minutes) for the bus to be $T \sim \exponential{\lambda}$, find the probability I wait exactly 4 minutes as a function of $\lambda$. \spc{2}
+
+\subquestionwithpoints{4} If we consider the waiting time (in minutes) for the bus to be $T \sim \exponential{\lambda}$, find the probability I wait between 4 and 10 minutes as a function of $\lambda$. \spc{5}
+
+\subquestionwithpoints{4} I've already stood at the bus stop 10 minutes waiting for my favorite bus. Find the probability I wait more than 14 minutes \textit{in total} as a function of $\lambda$. \spc{5}
+
+\subquestionwithpoints{4} Assuming the waiting time is a realization from that same data generating process $T \sim \exponential{\lambda}$ every morning and each morning is independent of other mornings, find the probability I wait between 4 and 10 minutes for the bus three days out of a five-day workweek as a function of $\lambda$. \spc{5}
+
+\subquestionwithpoints{4} Why is the model you created in (d) a bad model that can potentially yield wrong answers? \spc{3}
+
+\eenum
+
+
+
+\problem In this problem, we will investigating 5th graders and playing video games. The photograph below was part of a larger image of the entire auditorium at a boys' private school in Brooklyn. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3in]{students.png}
+\end{center}
+\end{figure}
+
+Altogether, of 156 fifth grade students in this auditorium, 109 said they play video games before they do their homework.
+
+
+\benum
+\subquestionwithpoints{2} Let $p$ denote the true proportion of fifth graders who play video games before they do their homework. What is your best guess for $p$? Round to the nearest two decimal places. \spc{2}
+
+\subquestionwithpoints{4} Construct a 99\% confidence interval (CI) for the true proportion of fifth graders who play video games before they do their homework. Use the correct notation for $CI_{a,b}$ and round to the nearest two decimal places. \spc{4}
+
+\subquestionwithpoints{4} Assuming that the CLT has kicked in by $n=156$ and that the approximation $p(1-p) \approx \phat(1-\phat)$ is not an issue, why could the CI you produced in (b) be not valid? \spc{4}
+
+\subquestionwithpoints{3} Regardless of whatever you wrote in (c), give an interpretation of what the interval in (b) means. \spc{4}
+
+\subquestionwithpoints{3} Provide two ways to make the interval in (b) have smaller width. \spc{4}
+
+
+\subquestionwithpoints{8} The parents association of the school are concerned that more than 50\% of their children play video games before doing their homework. Use a hypothesis test to evaluate their concern. Pick your own $\alpha$. Report your findings in English. \spc{11}
+
+\subquestionwithpoints{4} Assume $p=0.5$, and that each students' response is $\iid$ what is the \textit{exact} probability of getting this $\phat$ on this survey? No need to compute explicitly. \spc{5}
+
+
+\eenum
+
+
+\problem We will be investigating an important topic to society, although grisly: murder and the justice system. It is remarkably difficult to find good data on this, so I will use what I came up with. Of all murder trials, about 90\% of defendents are convicted (the justice system says they are guilty of murder). Call the event of a guilty conviction $A$. \\
+
+But some people who are guilty are actually innocent! \href{http://www.theguardian.com/world/2014/apr/28/death-penalty-study-4-percent-defendants-innocent}{Guardian magazine} recently published an article that claims that \qu{... 4\% of people sentenced to death row are innocent...} as well as other claims. How they did their study and came up with this estimate doesn't concern us. Further assume that this proportion is the same for all those convicted of murder. That means of those convicted, 4\% are really innocent. Call the event of being truly guilty $B$. \\
+
+Now, for the purposes of this problem only, assume that if someone is given the verdict of not guilty, there is a 20\% chance they actually committed the murder \textit{and got away with it scott-free}. I can't find any data supporting this but it seems reasonable to me. Assume it is true for this exercise.\\
+
+\benum
+\subquestionwithpoints{5} Draw a probability tree with the first event level being A and the second event level being B. Make sure to mark all branches and provide the joint probabilities on the right of the four joint events. Do not round your answers. \spc{7}
+
+\subquestionwithpoints{3} Of 12,000 people who are brought to trial for murder annually, how many in expectation are both guilty and given a guilty verdict? Assume all defendents' trials are independent. \spc{5}
+
+\subquestionwithpoints{2} What is the probability of a person brought to trial for murder being truly guilty? \spc{5}
+
+\subquestionwithpoints{3} What is the probability of the person being given a not guilty verdict (innocent) if they were in fact innocent of the murder they were charged with? Round to two decimal places.\spc{5}
+
+\subquestionwithpoints{2} What is the probability the justice system makes a mistake for those brought to trial for murder? \spc{1}
+
+
+\subquestionwithpoints{2} In America, the justice system is based on the \textit{presumption of innocence} which is sometimes summed up in the pithy phrase \qu{innocent until proven guilty.} The burden of proof lies on the accuser to \qu{prove beyond a reasonable doubt} the guilt of the accused. This is a long precedence in law dating back to Roman times as well as Islamic Law and Talmudic Law and it has been adopted by most civil law systems. \\ 
+
+Thus, in our justice example, the null hypothesis is that the defendent is innocent. What is the alternative hypothesis? \spc{1.5}
+
+\subquestionwithpoints{2} Assuming the $H_0$ and $H_a$ of part (e), what does the Type I error rate for our murder convictions case mean in English? Then, create a probability statement with the events $A$, $A^C$, $B$ and/or $B^C$.\spc{2}
+
+\subquestionwithpoints{2} Assuming the $H_0$ and $H_a$ of part (e), what does the Type II error rate for our murder convictions mean in English? Then, create a probability statement with the events $A$, $A^C$, $B$ and/or $B^C$.\spc{2}
+
+\subquestionwithpoints{2} Calculate the Type I error rate. \spc{2}
+
+
+\subquestionwithpoints{3} In an evil and sadistic society, they may have the inverse principle of justice: the accused are considered guilty until they prove their innocence beyond a reasonable doubt. In this case, would the Type I error be greater, lower or the same as the number you just computed in (i)? Why?
+
+
+\eenum
+
+\end{document}
